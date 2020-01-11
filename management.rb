@@ -6,8 +6,7 @@ require './message'
 
 class Management
   TASK_RANGE = (1..20).freeze
-  @start_number = 0
-  @end_number = 0
+  @selected_numbers = []
 
   def initialize
     Message.info
@@ -15,7 +14,7 @@ class Management
   end
 
   def prompt_input
-    input = gets.chomp.match(/\A(\d+)(\.*)(\d*)\z/)
+    input = gets.chomp
     check_input(input)
   end
 
@@ -27,18 +26,24 @@ class Management
   end
 
   def check_input(input)
-    error_handling if input.nil?
+    if input.match(/\A(\d+)\.+(\d+)\z/)
+      first = Regexp.last_match(1).to_i
+      last = Regexp.last_match(2).to_i
+      return error_handling unless first <= last && TASK_RANGE.include?(first) && TASK_RANGE.include?(last)
 
-    @start_number = input[1].to_i
-    @end_number = input[3].empty? ? @start_number : input[3].to_i
+      @selected_numbers = (first..last).to_a
+    else
+      @selected_numbers = input.scan(/\d+/)
+      return error_handling if @selected_numbers.empty?
 
-    error_handling unless TASK_RANGE.include?(@start_number) && TASK_RANGE.include?(@end_number)
+      @selected_numbers.each do |number|
+        return error_handling unless TASK_RANGE.include?(number.to_i)
+      end
+    end
   end
 
   def output_answer
-    input_range = @start_number..@end_number
-
-    input_range.each do |number|
+    @selected_numbers.each do |number|
       Message.question_number(number)
       eval("q#{number}", binding, 'task.rb')
     end
