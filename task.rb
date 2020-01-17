@@ -5,7 +5,7 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.push("斎藤")
+  names << "斉藤"
   p names
 end
 
@@ -14,7 +14,7 @@ def q2
   array2 = %w(bird bat tiger)
 
   # 以下に回答を記載
-  array3=array1.concat(array2)
+  array3=array1 + array2
   p array3
 end
 
@@ -29,8 +29,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete(nil)
-  p sports
+  p sports.compact
 end
 
 def q5
@@ -46,21 +45,14 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  def map_q(numbers1)
-    numbers1.map do|a|
-      a*10
-    end
-   end
-   
-   numbers2=map_q(numbers1)
-   p numbers2
+  p number2 = numbers1.map { |number| number*10 }
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  p array.map(&:to_i)
+  p array.map!(&:to_i)
 end
 
 def q8
@@ -78,10 +70,8 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  x=1
-  names.each do |name|
-    puts "会員No.#{x} #{name}さん"
-  x+=1   
+  names.each_with_index do |name,i|
+      puts "会員No.#{i+1} #{name}さん"
   end
 
 end
@@ -90,21 +80,34 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-
+  foods.each do |food|
+      if food.include?("うに")
+        p "#{food}は好物です"
+    else
+        p "#{food}はまぁまぁ好きです"
+      end
+  end
+  
 end
 
 def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+  sports2=sports.flatten.uniq
+  puts "ユーザーの趣味一覧"
+  
+  sports2.each.with_index(1) do |sport,i|
+      puts "No#{i} #{sport}"
+  end
+  
 end
 
 def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-
+  p data[:user][:name]
 end
 
 def q13
@@ -112,14 +115,15 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  p user_data.update(update_data)
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  array=data.keys
+  p array
 end
 
 def q15
@@ -127,7 +131,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+  puts data1.has_key?(:age)? "OK" : "NG"
+  puts data2.has_key?(:age)? "OK" : "NG"
 end
 
 def q16
@@ -139,7 +144,9 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users.each do |user|
+      puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です"
+  end
 end
 
 class UserQ17
