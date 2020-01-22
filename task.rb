@@ -27,7 +27,9 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  p sports.select { |e| e }
+  # 修正前
+  # p sports.select { |e| e }
+  p sports.compact!
 end
 
 def q5
@@ -35,9 +37,11 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-  p array1.length == 0
-  p array2.length == 0
-  # 改善の余地ありそう！（照屋）
+  # 修正前（コメントアウト部分）
+  # p array1.length == 0
+  # p array2.length == 0
+  p array1.empty?
+  p array2.empty?
 end
 
 def q6
@@ -51,7 +55,9 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  p array.map(&:to_i)
+  # 修正前
+  # p array.map(&:to_i)
+  p array.map!(&:to_i)
 end
 
 def q8
@@ -92,14 +98,16 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+  sports.flatten.uniq.each.with_index(1) do |sport,n|
+    puts "No#{n} #{sport}"
+  end
 end
 
 def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-
+  puts data[:user][:name]
 end
 
 def q13
@@ -107,14 +115,16 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  user_data.update(update_data)
+  p user_data
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  data_keys = data.keys
+  p data_keys
 end
 
 def q15
@@ -122,7 +132,15 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+  def include_age?(hash)
+    if hash.find { |key,value| key == :age }
+      puts "OK"
+    else
+      puts "NG"
+    end
+  end
+  include_age?(data1)
+  include_age?(data2)
 end
 
 def q16
@@ -134,7 +152,9 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users.each do |user|
+    puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
+  end
 end
 
 class UserQ17
