@@ -4,8 +4,27 @@
 def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
-  # 以下に回答を記載
+  # 以下に回答を記
+  #方法その１
+  names << "斎藤"
 
+  #方法その2
+  #num = names.length
+  #names[num] = "斎藤"
+
+  #方法その3
+  #num = names.size
+  #names[num] = "斎藤"
+
+  #方法その4
+  #num = names.count
+  #names[num] = "斎藤"
+
+  puts "出力にputsを使用した場合"
+  puts names
+  puts "--------------------------------------------------------------------"
+  puts "出力にpを使用した場合"
+  p names
 end
 
 def q2
@@ -13,21 +32,49 @@ def q2
   array2 = %w(bird bat tiger)
 
   # 以下に回答を記載
+  #方法その１
+  #array2.each do |animal|
+  #  array1 << animal
+  #end
+  #array = array1
 
+  #方法その2
+  array = array1 + array2
+
+  #方法その3
+  #array = array1.concat(array2)
+
+  p array
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
+  #方法その１
+  ans = numbers.count(3)
 
+  #方法その2
+  #ans = 0
+  #numbers.each do |number|
+  #  if number == 3
+  #  ans += 1
+  #  end
+  #end
+
+
+  puts ans
 end
 
 def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  sports.each do |sport|
+    if sport
+      puts sport
+    end
+  end
 end
 
 def q5
@@ -35,6 +82,25 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
+  #方法その１
+  #def arrayCheck1(array)
+  #  if array.count >= 1
+  #    puts false
+  #  else
+  #    puts true
+  #  end
+  #end
+
+  #arrayCheck1(array1)
+  #arrayCheck1(array2)
+
+  #方法その2
+  def arrayCheck2(array)
+    puts array.count == 0
+  end
+
+    arrayCheck2(array1)
+    arrayCheck2(array2)
 
 end
 
@@ -42,22 +108,37 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  numbers2 = []
+  numbers1.each do |number|
+    numbers2 << number*10
+  end
+  p numbers2
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
+  i = 0
+  array.each do |element|
+    array[i] = element.to_i
+    i+=1
+  end
 
+  p array
 end
 
 def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-
-  
+  upper_case_programming_languages = []
+  i = 0
+  programming_languages.each do |lang|
+    programming_languages[i] = lang.capitalize
+    upper_case_programming_languages << lang.upcase
+    i+=1
+  end
   p programming_languages
   p upper_case_programming_languages
 end
@@ -66,6 +147,11 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+  i = 1
+  names.each do |name|
+    puts "会員No.#{i}\s#{name}さん"
+    i+=1
+  end
 
 end
 
@@ -73,6 +159,13 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
+  foods.each do |food|
+    if food.include?("うに")
+      p "#{food}は好物です"
+    else
+      p "#{food}はまぁまぁ好きです"
+    end
+  end
 
 end
 
