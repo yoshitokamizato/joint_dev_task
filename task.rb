@@ -70,11 +70,8 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.each do |sport|
-    if sport
-      puts sport
-    end
-  end
+  p sports.compact!
+
 end
 
 def q5
@@ -95,23 +92,31 @@ def q5
   #arrayCheck1(array2)
 
   #方法その2
-  def arrayCheck2(array)
-    puts array.count == 0
-  end
+  #def arrayCheck2(array)
+  #  puts array.count == 0
+  #end
 
-    arrayCheck2(array1)
-    arrayCheck2(array2)
+  #  arrayCheck2(array1)
+  #  arrayCheck2(array2)
 
+  #方法その3
+  puts array1.empty?
+  puts array2.empty?
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2 = []
-  numbers1.each do |number|
-    numbers2 << number*10
-  end
+  #方法その1
+  #numbers2 = []
+  #numbers1.each do |number|
+  #  numbers2 << number*10
+  #end
+
+  #方法その2
+  numbers2 =  numbers1.map{|num| num*10}
+
   p numbers2
 end
 
@@ -119,26 +124,34 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  i = 0
-  array.each do |element|
-    array[i] = element.to_i
-    i+=1
-  end
+  #方法その１
+  #i = 0
+  #array.each do |element|
+  #  array[i] = element.to_i
+  #  i+=1
+  #end
 
-  p array
+  #方法その2
+  p array.map!(&:to_i)
 end
 
 def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  upper_case_programming_languages = []
-  i = 0
-  programming_languages.each do |lang|
-    programming_languages[i] = lang.capitalize
-    upper_case_programming_languages << lang.upcase
-    i+=1
-  end
+  #方法その1
+  #upper_case_programming_languages = []
+  #i = 0
+  #programming_languages.each do |lang|
+  #  programming_languages[i] = lang.capitalize
+  #  upper_case_programming_languages << lang.upcase
+  #  i+=1
+  #end
+
+  #方法その2
+  programming_languages = programming_languages.map(&:capitalize)
+  upper_case_programming_languages = programming_languages.map(&:upcase)
+
   p programming_languages
   p upper_case_programming_languages
 end
@@ -147,10 +160,15 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  i = 1
-  names.each do |name|
+  #方法その1
+  #i = 1
+  #names.each do |name|
+  #  puts "会員No.#{i}\s#{name}さん"
+  #  i+=1
+  #end
+  #方法その2
+  names.each.with_index(1) do |name, i|
     puts "会員No.#{i}\s#{name}さん"
-    i+=1
   end
 
 end
@@ -173,14 +191,18 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+  puts "ユーザーの趣味一覧"
+  sports = sports.flatten! | sports
+  sports.each.with_index(1) do |sport, i|
+    p "会員No.#{i}\s#{sport}"
+  end
 end
 
 def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-
+  p data[:user][:name]
 end
 
 def q13
@@ -188,14 +210,21 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
+  update_data.keys.each do |key|
+    if user_data.keys.include?(key)
+      user_data[key] = update_data[key]
+    end
+  end
 
+  puts user_data
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  data_keys = data.keys
+  p data_keys
 end
 
 def q15
@@ -203,7 +232,16 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
+  def if_age_present?(data)
+    if data.keys.include?(:age)
+      p "OK"
+    else
+      p "NG"
+    end
+  end
 
+  if_age_present?(data1)
+  if_age_present?(data2)
 end
 
 def q16
@@ -215,18 +253,44 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users.each do |user|
+    puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です"
+  end
 end
 
 class UserQ17
   # 以下に回答を記載
+  attr_accessor :name, :age, :gender, :admin
+  def initialize(name:, age:, gender:, admin:)
+    self.name = name
+    self.age = age
+    self.gender = gender
+    self.admin = admin
+  end
+
+  def info
+    puts "名前：#{self.name}"
+    puts "年齢：#{self.age}"
+    puts "性別：#{self.gender}"
+    puts "管理者権限：#{if_admission_ok?}"
+  end
+
+  private
+
+  def if_admission_ok?
+    if self.admin == true
+      return "有り"
+    else
+      return "無し"
+    end
+  end
 
 end
 
 def q17
   # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
   user1 = UserQ17.new(name: "神里", age: 32, gender: "男", admin: true)
-  user2 = UserQ17.new(name: "あじー", age: 32, gender: "男", admin: false)
+  user2 = UserQ17.new(name: "Popy", age: 732, gender: "不明", admin: false)
 
   user1.info
   puts "-------------"
@@ -235,7 +299,19 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  attr_accessor :name, :age
+  def initialize(name:, age:)
+    self.name = name
+    self.age = age
+  end
 
+  def introduce
+    if self.age >= 20
+      return "こんにちは，#{self.name}と申します。宜しくお願いいたします。"
+    else
+      return "はいさいまいど〜，#{self.name}です！！！ピッチピチの#{self.age}歳です！！！"
+    end
+  end
 end
 
 def q18
@@ -249,8 +325,8 @@ end
 
 class Item
   # 以下を修正して下さい
-
-  def initialize(name)
+  attr_accessor :name
+  def initialize(name:)
     @name = name
   end
 end
@@ -263,12 +339,35 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_accessor :name, :age
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 
 end
 
 class Zoo
   # 以下に回答を記載
+  attr_accessor :name, :entry_fee
+  def initialize(name:, entry_fee:)
+    @name = name
+    @entry_fee = entry_fee
+  end
 
+  def info_entry_fee(user)
+
+    fee_divisions =  [[0, 5], [6, 12], [13, 64], [65, 120]]
+
+    fee_divisions.each.with_index(0) do |division, i|
+
+        if user.age >= division[0] && user.age <= division[1]
+            puts "#{user.name}さんの入場料金は\s#{@entry_fee.values[i]}\s円です。"
+        end
+
+    end
+
+  end
 end
 
 
