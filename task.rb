@@ -268,20 +268,20 @@ class UserQ17
   #変数の値を更新しないからいらない
   #attr_accessor :name, :age, :gender, :admin
 
-  def initialize(name:, age:, gender:, admin:)
-    @name = name
-    @age = age
-    @gender = gender
-    @admin = admin
-  end
+  #def initialize(name:, age:, gender:, admin:)
+  #  @name = name
+  #  @age = age
+  #  @gender = gender
+  #  @admin = admin
+  #end
 
   #オプション引数を使用する場合。多分何か違うと思いますが
-  #def initialize(**data)
-  #  @property = []
-  #  data.values.each do |value|
-  #    @property << value
-  #  end
-  #end
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
+    @admin = params[:admin]
+  end
 
   def info
     puts <<~EOS
