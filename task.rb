@@ -149,7 +149,7 @@ def q8
   #end
 
   #方法その2
-  programming_languages = programming_languages.map(&:capitalize)
+  programming_languages.map!(&:capitalize)
   upper_case_programming_languages = programming_languages.map(&:upcase)
 
   p programming_languages
@@ -192,8 +192,9 @@ def q11
 
   # 以下に回答を記載
   puts "ユーザーの趣味一覧"
-  sports = sports.flatten! | sports
-  sports.each.with_index(1) do |sport, i|
+  #sports = sports.flatten! | sports
+  #sports.flatten!.uniq!
+  sports.flatten!.uniq!.each.with_index(1) do |sport, i|
     p "会員No.#{i}\s#{sport}"
   end
 end
@@ -210,13 +211,15 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  update_data.keys.each do |key|
-    if user_data.keys.include?(key)
-      user_data[key] = update_data[key]
-    end
-  end
+  #方法その１
+  #update_data.keys.each do |key|
+  #  if user_data.keys.include?(key)
+  #    user_data[key] = update_data[key]
+  #  end
+  #end
 
-  puts user_data
+  #方法その2
+  puts user_data.merge!(update_data)
 end
 
 def q14
@@ -233,11 +236,12 @@ def q15
 
   # 以下に回答を記載
   def if_age_present?(data)
-    if data.keys.include?(:age)
-      p "OK"
-    else
-      p "NG"
-    end
+    #if data.keys.include?(:age)
+    #  p "OK"
+    #else
+    #  p "NG"
+    #end
+    data.keys.include?(:age) ? (p "OK") : (p "NG")
   end
 
   if_age_present?(data1)
@@ -260,25 +264,38 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  attr_accessor :name, :age, :gender, :admin
+
+  #変数の値を更新しないからいらない
+  #attr_accessor :name, :age, :gender, :admin
+
   def initialize(name:, age:, gender:, admin:)
-    self.name = name
-    self.age = age
-    self.gender = gender
-    self.admin = admin
+    @name = name
+    @age = age
+    @gender = gender
+    @admin = admin
   end
 
+  #オプション引数を使用する場合。多分何か違うと思いますが
+  #def initialize(**data)
+  #  @property = []
+  #  data.values.each do |value|
+  #    @property << value
+  #  end
+  #end
+
   def info
-    puts "名前：#{self.name}"
-    puts "年齢：#{self.age}"
-    puts "性別：#{self.gender}"
-    puts "管理者権限：#{if_admission_ok?}"
+    puts <<~EOS
+      名前：#{@name}
+      年齢：#{@age}
+      性別：#{@gender}
+      管理者権限：#{if_admission_ok?}
+    EOS
   end
 
   private
 
   def if_admission_ok?
-    if self.admin == true
+    if @admin == true
       return "有り"
     else
       return "無し"
@@ -299,17 +316,20 @@ end
 
 class UserQ18
   # 以下に回答を記載
-  attr_accessor :name, :age
+
+  #変数の値を更新しないからいらない
+  #attr_accessor :name, :age
+
   def initialize(name:, age:)
-    self.name = name
-    self.age = age
+    @name = name
+    @age = age
   end
 
   def introduce
-    if self.age >= 20
-      return "こんにちは，#{self.name}と申します。宜しくお願いいたします。"
+    if @age >= 20
+      "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     else
-      return "はいさいまいど〜，#{self.name}です！！！ピッチピチの#{self.age}歳です！！！"
+      "はいさいまいど〜，#{@name}です！！！ピッチピチの#{@age}歳です！！！"
     end
   end
 end
@@ -349,7 +369,7 @@ end
 
 class Zoo
   # 以下に回答を記載
-  attr_accessor :name, :entry_fee
+
   def initialize(name:, entry_fee:)
     @name = name
     @entry_fee = entry_fee
@@ -359,7 +379,7 @@ class Zoo
 
     fee_divisions =  [[0, 5], [6, 12], [13, 64], [65, 120]]
 
-    fee_divisions.each.with_index(0) do |division, i|
+    fee_divisions.each_with_index do |division, i|
 
         if user.age >= division[0] && user.age <= division[1]
             puts "#{user.name}さんの入場料金は\s#{@entry_fee.values[i]}\s円です。"
