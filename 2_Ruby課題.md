@@ -11,7 +11,7 @@ Rubyの基礎力を高めることがプログラマーとしての生産性を�
 - Rubyには便利なメソッドが豊富に用意されています。「この操作を実現できるメソッドはないかな？」と検索するクセを付けて下さい。
 - 可読性を高めるため，インデント幅にも気を付けるようにして下さい。
 
-## Q1. 次の配列に "斎藤" を追加し，出力して下さい。
+## Q1. 次の配列の最後に "斎藤" を追加し，出力して下さい。
 
 ```
 names = ["田中", "佐藤", "佐々木", "高橋"]
@@ -24,7 +24,7 @@ array1 = %w(dog cat fish)
 array2 = %w(bird bat tiger)
 ```
 
-## Q3. 次の配列の中に `3` がいくつあるかを出力するコードを書いて下さい。
+## Q3. 次の配列の中に `3` がいくつあるかを出力するコードを書き，出力して下さい。
 
 ```
 numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
@@ -79,6 +79,7 @@ programming_languages = %w(ruby php python javascript)
 
 # コードを追加
 
+# 以下は変更しないで下さい
 p programming_languages
 p upper_case_programming_languages
 ```
@@ -150,7 +151,7 @@ update_data = { age: 32, address: "沖縄" }
 data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 ```
 
-## Q15. `age` というキーが含まれている場合は OK ，含まれていない場合は NG が出力されるコードを書いて下さい。
+## Q15. `age` というキーが含まれている場合は `OK` ，含まれていない場合は `NG` という文字列が出力されるコードを書いて下さい。
 
 例
 
