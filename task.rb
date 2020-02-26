@@ -5,7 +5,8 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.push("斎藤")
+  p names
 end
 
 def q2
@@ -13,6 +14,10 @@ def q2
   array2 = %w(bird bat tiger)
 
   # 以下に回答を記載
+  array = array1.push(array2)
+  array.flatten!
+
+  p array
 
 end
 
@@ -20,7 +25,8 @@ def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  newarray = numbers.find_all { |n| n == 3  }
+  p newarray.length
 end
 
 def q4
