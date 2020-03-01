@@ -5,8 +5,9 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
-end
+  push.names (”斎藤”)
+　puts names
+ends
 
 def q2
   array1 = %w(dog cat fish)
