@@ -159,19 +159,19 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  def initialize(name:,age:,gender:,admin:)
-    @name = name
-    @age = age
-    @gender = gender
-    @admin = admin
+  def initialize(users)
+    @name = users[:name]
+    @age = users[:age]
+    @gender = users[:gender]
+    @admin = users[:admin] ? "有り" : "無し"
   end
   def info
     puts <<~TEXT
     名前:#{@name}
     年齢:#{@age}
     性別:#{@gender}
+    管理者権限:#{@admin}
     TEXT
-    puts @admin ? "管理者権限:有り" : "管理者権限:無し"
   end
 
 
@@ -194,9 +194,9 @@ class UserQ18
     @age = age
   end
   def introduce
-    if @age == 32
+    if @age >= 18
       puts "こんにちは,#{@name}と申します。宜しくお願いいたします。"
-    elsif @age == 10
+    elsif @age < 18
       puts "はいさいまいど〜,#{@name}です!!"
     end
   end
@@ -213,12 +213,10 @@ end
 
 class Item
   # 以下を修正して下さい
+  attr_reader :name
 
   def initialize(name:)
     @name = name
-  end
-  def name
-    return "#{@name}"
   end
 end
 
@@ -231,9 +229,9 @@ end
 class UserQ20
   # 以下に回答を記載
 attr_reader :name, :age
-  def initialize(**params)
-    @name = params[:name]
-    @age = params[:age]
+  def initialize(**user)
+    @name = user[:name]
+    @age = user[:age]
   end
 end
 
@@ -247,17 +245,18 @@ class Zoo
     @adult = @entry_fee[:adult]
     @senior = @entry_fee[:senior]
   end
-  def info_entry_fee(params)
-    if params.age <= 3
-      price = @infant
-    elsif params.age <= 18
-      price = @children
-    elsif params.age <= 65
-      price = @adult
-    else
-      price = @senior
+  def info_entry_fee(user)
+    price = case user.age
+    when 0..6
+      @infant
+    when 7..18
+      @children
+    when 19..65
+      @adult
+    when 66..150
+      @senior
     end
-    puts "#{params.name}さんの入場料金は#{price}円です。"
+    puts "#{user.name}さんの入場料金は#{price}円です。"
   end
 end
 
