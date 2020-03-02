@@ -122,7 +122,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  p user_data.merge(update_data)
+  p user_data.update(update_data)
 
 end
 
@@ -152,11 +152,28 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users.each do |user|
+    puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
+  end
 end
 
 class UserQ17
   # 以下に回答を記載
+  def initialize(name:,age:,gender:,admin:)
+    @name = name
+    @age = age
+    @gender = gender
+    @admin = admin
+  end
+  def info
+    puts <<~TEXT
+    名前:#{@name}
+    年齢:#{@age}
+    性別:#{@gender}
+    TEXT
+    puts @admin ? "管理者権限:有り" : "管理者権限:無し"
+  end
+
 
 end
 
@@ -172,7 +189,17 @@ end
 
 class UserQ18
   # 以下に回答を記載
-
+  def initialize(name:,age:)
+    @name = name
+    @age = age
+  end
+  def introduce
+    if @age == 32
+      puts "こんにちは,#{@name}と申します。宜しくお願いいたします。"
+    elsif @age == 10
+      puts "はいさいまいど〜,#{@name}です!!"
+    end
+  end
 end
 
 def q18
@@ -187,8 +214,11 @@ end
 class Item
   # 以下を修正して下さい
 
-  def initialize(name)
+  def initialize(name:)
     @name = name
+  end
+  def name
+    return "#{@name}"
   end
 end
 
@@ -200,12 +230,35 @@ end
 
 class UserQ20
   # 以下に回答を記載
-
+attr_reader :name, :age
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 end
 
 class Zoo
   # 以下に回答を記載
-
+  def initialize(**zoo)
+    @name = zoo[:name]
+    @entry_fee = zoo[:entry_fee]
+    @infant = @entry_fee[:infant]
+    @children = @entry_fee[:children]
+    @adult = @entry_fee[:adult]
+    @senior = @entry_fee[:senior]
+  end
+  def info_entry_fee(params)
+    if params.age <= 3
+      price = @infant
+    elsif params.age <= 18
+      price = @children
+    elsif params.age <= 65
+      price = @adult
+    else
+      price = @senior
+    end
+    puts "#{params.name}さんの入場料金は#{price}円です。"
+  end
 end
 
 
