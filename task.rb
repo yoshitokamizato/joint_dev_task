@@ -163,14 +163,15 @@ class UserQ17
     @name = users[:name]
     @age = users[:age]
     @gender = users[:gender]
-    @admin = users[:admin] ? "有り" : "無し"
+    @admin = users[:admin]
   end
   def info
+    admin = @admin ? "有り" : "無し"
     puts <<~TEXT
     名前:#{@name}
     年齢:#{@age}
     性別:#{@gender}
-    管理者権限:#{@admin}
+    管理者権限:#{admin}
     TEXT
   end
 
@@ -195,9 +196,9 @@ class UserQ18
   end
   def introduce
     if @age >= 18
-      puts "こんにちは,#{@name}と申します。宜しくお願いいたします。"
+      "こんにちは,#{@name}と申します。宜しくお願いいたします。"
     elsif @age < 18
-      puts "はいさいまいど〜,#{@name}です!!"
+      "はいさいまいど〜,#{@name}です!!"
     end
   end
 end
