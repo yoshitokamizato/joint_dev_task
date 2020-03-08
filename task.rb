@@ -142,8 +142,6 @@ def q15
     puts "NG"
   end
 
-  puts data1.has_key?(:"age")
-  puts data2.has_key?(:"age")
 end
 
 def q16
