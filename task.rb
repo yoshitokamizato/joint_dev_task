@@ -166,7 +166,7 @@ class UserQ17
     @name = user[:name]
     @age = user[:age]
     @gender = user[:gender]
-    @admin = user[:admin]
+    @admin= user[:admin]
   end
 
   def info
