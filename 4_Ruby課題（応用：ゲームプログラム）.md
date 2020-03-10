@@ -51,16 +51,6 @@ brave.attack(monster)
 
 4. 勇者クラスの攻撃メソッド内でモンスタークラスのHPから勇者クラスの攻撃力を引く
 
-```
-# 例
-
-class Brave
-  def attack(monster)
-    monster.hp = monster.hp - brave.attack
-  end
-end
-```
-
 5. 同様の処理をモンスタークラスでも実装する
 
 ## 課題3：ループ処理を実装しよう
