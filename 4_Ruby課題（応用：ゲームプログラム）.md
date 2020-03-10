@@ -37,7 +37,7 @@ monster = Monster.new
 # 例
 
 class Brave
-  def attack
+  def attack(monster)
   end
 end
 ```
