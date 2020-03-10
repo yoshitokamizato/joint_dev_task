@@ -46,9 +46,13 @@ sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "�
 例
 
 ```
-array1 = [] -> true
+array1 = []
+# 実行結果
+true
 
-array2 = [1, 5, 8, 10] -> false
+array2 = [1, 5, 8, 10]
+# 実行結果
+false
 ```
 
 ## Q6. 次の配列から，期待された結果の配列 `numbers2` を作成し，出力して下さい。
@@ -159,9 +163,13 @@ data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "ho
 例
 
 ```
-data1 = { name: "saitou", hobby: "soccer", age: 33, role: "admin" } -> OK
+data1 = { name: "saitou", hobby: "soccer", age: 33, role: "admin" }
+# 実行結果
+OK
 
-data2 = { name: "yamada", hobby: "baseball", role: "normal" } -> NG
+data2 = { name: "yamada", hobby: "baseball", role: "normal" }
+# 実行結果
+NG
 ```
 
 ## Q16. 次の配列の各要素について，「私の名前は〜です。年齢は〜歳です。」と表示して下さい。
