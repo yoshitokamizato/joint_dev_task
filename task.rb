@@ -136,11 +136,13 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if data1.include?(:"age")
-    puts "OK"
-  else
-    puts "NG"
-  end
+  puts data1.include?(:age)?"OK" : "NG"
+  puts data2.include?(:age)?"OK" : "NG"
+  #if data1.include?(:age)
+  #  puts "OK"
+  #else
+  #  puts "NG"
+  #end
 
 end
 
@@ -153,12 +155,27 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users. each do |user|
+  puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
+  end
 end
 
 class UserQ17
   # 以下に回答を記載
+  def initialize(user)
+    @name = user[:name]
+    @age = user[:age]
+    @gender = user[:gender]
+    @admin = user[:admin]
+  end
 
+  def info
+    admin = @admin ? "有り" : "無し"
+    puts "名前:#{@name}"
+    puts "年齢:#{@age}"
+    puts "性別:#{@gender}"
+    puts "管理者権限:#{admin}"
+  end
 end
 
 def q17
