@@ -53,7 +53,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  p array.map { |n| n.to_i }
+  p array.map(&:to_i)
 end
 
 def q8
@@ -89,7 +89,12 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+  puts "ユーザーの趣味一覧"
+  sports.flatten!
+  sports.uniq!
+  sports.each.with_index(1) do |sport,i| 
+    puts "No#{i} #{sport}"
+  end
 end
 
 def q12
