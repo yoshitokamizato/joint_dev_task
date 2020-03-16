@@ -107,9 +107,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  user_data[:age] = 32
-  user_data[:address] = "沖縄"
-  puts user_data
+  puts user_data.merge(update_data)
 end
 
 def q14
@@ -146,7 +144,15 @@ end
 
 class UserQ17
   # 以下に回答を記載
-
+  def initialize
+    @name = "名前 : "
+    @age = "年齢 : "
+    @gender = "性別 : "
+    @admin = "管理者権限 : "
+  end
+  def info
+    puts 
+  end
 end
 
 def q17
