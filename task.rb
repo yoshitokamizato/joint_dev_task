@@ -108,7 +108,7 @@ def q13
 
   # 以下に回答を記載
   puts user_data.merge!(update_data)
-  puts user_data
+
 end
 
 def q14
