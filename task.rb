@@ -177,9 +177,30 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 
+  def introduce
+    # young_old_typeメソッドの呼び出し
+    age_type = young_old_type
+
+    if age_type == "young_type"
+      puts "はいさいまいど〜，#{@name}です！！！"
+    else
+      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    end
+  end
 end
-
+# 年齢で分岐させるメソッド
+def young_old_type
+  if @age < 18
+    "young_type"
+  else
+    "old_type"
+  end
+end
 def q18
   # ここは変更しないで下さい
   user1 = UserQ18.new(name: "あじー", age: 32)
