@@ -187,9 +187,9 @@ class UserQ18
 
     age_type = young_old_type
     if age_type == "young_type"
-      print "はいさいまいど〜，#{@name}です！！！"
+      "はいさいまいど〜，#{@name}です！！！"
     else
-      print "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     end
   end
 end
@@ -212,8 +212,8 @@ end
 
 class Item
   # 以下を修正して下さい
-  attr_accessor :name
-  def initialize(name)
+  attr_reader :name
+  def initialize(name:)
     @name = name
   end
 end
