@@ -183,17 +183,17 @@ class UserQ18
   end
 
   def introduce
-    # young_old_typeメソッドの呼び出し
-    age_type = young_old_type
+  # young_old_typeメソッドの呼び出し
 
+    age_type = young_old_type
     if age_type == "young_type"
-      puts "はいさいまいど〜，#{@name}です！！！"
+      print "はいさいまいど〜，#{@name}です！！！"
     else
-      puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      print "こんにちは，#{@name}と申します。宜しくお願いいたします。"
     end
   end
 end
-# 年齢で分岐させるメソッド
+  # 年齢で分岐させるメソッド
 def young_old_type
   if @age < 18
     "young_type"
@@ -212,7 +212,7 @@ end
 
 class Item
   # 以下を修正して下さい
-
+  attr_accessor :name
   def initialize(name)
     @name = name
   end
