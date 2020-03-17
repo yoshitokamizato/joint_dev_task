@@ -154,6 +154,7 @@ class UserQ17
   def info
     # 有り無しの判断を変数で最初に定義しておく
     admin = @admin ? "有り" : "無し"
+    # ヒアドキュメントを使用してinitializeの変数を出力
     puts <<~EOS
     名前：#{@name}
     年齢：#{@age}
