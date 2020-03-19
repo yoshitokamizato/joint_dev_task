@@ -124,3 +124,67 @@ names = ["田中", "佐藤", "佐々木", "高橋"]
 ```
 foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 ```
+
+## Q11. 次の配列を用いて，期待する出力結果になるようにコードを書いて下さい。
+
+```
+sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
+```
+
+期待する出力結果
+
+```
+ユーザーの趣味一覧
+No1 サッカー
+No2 バスケ
+No3 野球
+No4 フットサル
+No5 水泳
+No6 ハンドボール
+No7 卓球
+No8 ボルダリング
+```
+
+## Q12. 次のハッシュから `name` の値を出力して下さい。
+
+```
+data = { user: { name: "satou", age: 33 } }
+```
+
+## Q13. 次の `user_data` に，`update_data` の内容を反映させ，`user_data` の内容を書き換え，出力して下さい。
+
+```
+user_data = { name: "神里", age: 31, address: "埼玉" }
+update_data = { age: 32, address: "沖縄" }
+```
+
+## Q14. 次の配列から全てのキーを取り出した配列を作成し，出力して下さい。
+
+```
+data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
+```
+
+## Q15. `age` というキーが含まれている場合は `OK` ，含まれていない場合は `NG` という文字列が出力されるコードを書いて下さい。
+
+例
+
+```
+data1 = { name: "saitou", hobby: "soccer", age: 33, role: "admin" }
+# 実行結果
+OK
+
+data2 = { name: "yamada", hobby: "baseball", role: "normal" }
+# 実行結果
+NG
+```
+
+## Q16. 次の配列の各要素について，「私の名前は〜です。年齢は〜歳です。」と表示して下さい。
+
+```
+users = [
+  { name: "satou", age: 22 },
+  { name: "yamada", age: 12 },
+  { name: "takahashi", age: 32 },
+  { name: "nakamura", age: 41 }
+]
+```
