@@ -9,8 +9,8 @@ def q1
 end
 
 def q2
-  array1 = %w(dog cat fish)
-  array2 = %w(bird bat tiger)
+  array1 = ["dog", "cat", "fish"]
+  array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
 
@@ -28,6 +28,8 @@ def q4
 
   # 以下に回答を記載
 
+  # 以下は変更しないで下さい
+  p sports
 end
 
 def q5
@@ -50,6 +52,8 @@ def q7
 
   # 以下に回答を記載
 
+  # 以下は変更しないで下さい
+  p array
 end
 
 def q8
