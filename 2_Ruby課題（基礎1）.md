@@ -18,18 +18,24 @@ Rubyの基礎力を高めることがプログラマーとしての生産性を�
 
 ## Q1. 次の配列の最後に "斎藤" を追加し，出力して下さい。
 
+ヒント：検索キーワードは「ruby 配列　要素を追加」
+
 ```
 names = ["田中", "佐藤", "佐々木", "高橋"]
 ```
 
 ## Q2. 次の二つの配列を合体させた新しい配列 `array` を作成し，出力して下さい。
 
+ヒント：検索キーワードは「ruby 配列　結合」
+
 ```
-array1 = %w(dog cat fish)
-array2 = %w(bird bat tiger)
+array1 = ["dog", "cat", "fish"]
+array2 = ["bird", "bat", "tiger"]
 ```
 
 ## Q3. 次の配列の中に `3` がいくつあるかを出力するコードを書き，出力して下さい。
+
+ヒント：検索キーワードは「ruby 配列 要素 数える」
 
 ```
 numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
@@ -183,113 +189,4 @@ users = [
   { name: "takahashi", age: 32 },
   { name: "nakamura", age: 41 }
 ]
-```
-
-## Q17. 次の Userクラス 内にコードを追加し，期待する出力結果になるようにして下さい。
-
-```
-class User
-
-# コードを追加
-
-end
-
-user1 = User.new(name: "神里", age: 32, gender: "男", admin: true)
-user2 = User.new(name: "あじー", age: 32, gender: "男", admin: false)
-
-user1.info
-puts "-------------"
-user2.info
-```
-
-期待する出力結果
-
-```
-名前：神里
-年齢：32
-性別：男
-管理者権限：有り
--------------
-名前：あじー
-年齢：32
-性別：男
-管理者権限：無し
-```
-
-## Q18. 期待する出力結果になるようなUserクラスを作成して下さい。ただし，年齢が18歳以上であるかどうかで場合分けをして下さい。
-
-```
-# コードを追加
-
-user1 = User.new(name: "あじー", age: 32)
-user2 = User.new(name: "ゆたぼん", age: 10)
-
-puts user1.introduce
-puts user2.introduce
-```
-
-期待する出力結果
-
-```
-こんにちは，あじーと申します。宜しくお願いいたします。
-はいさいまいど〜，ゆたぼんです！！！
-```
-
-## Q19. 次のコードはエラーが出ます。期待する出力結果となるようにコードを修正して下さい。
-
-```
-class Item
-  def initialize(name)
-    @name = name
-  end
-end
-
-book = Item.new(name: "ゼロ秒思考")
-puts book.name
-```
-
-期待する出力結果
-
-```
-ゼロ秒思考
-```
-
-## Q20. 次の仕様を満たした上で，期待する出力結果になるようにコードを追加して下さい。
-
-- 年齢区分は，幼児(0〜5歳)，子供(6〜12歳)，成人(13〜64歳)，シニア(65〜120歳)の4パターンとします。（この範囲外の年齢については対処しなくてOKです）
-
-```
-class User
-
-  # コードを追加
-
-end
-
-class Zoo
-
-  # コードを追加
-
-end
-
-zoo = Zoo.new(name: "旭山動物園", entry_fee: { infant: 0, children: 400, adult: 800, senior: 500 })
-
-users = [
-  User.new(name: "たま", age: 3),
-  User.new(name: "ゆたぼん", age: 10),
-  User.new(name: "あじー", age: 32),
-  User.new(name: "ぎん", age: 108)
-]
-
-users.each do |user|
-  zoo.info_entry_fee(user)
-end
-```
-
-期待する出力結果
-
-```
-たまさんの入場料金は 0 円です。
-ゆたぼんさんの入場料金は 400 円です。
-あじーさんの入場料金は 800 円です。
-ぎんさんの入場料金は 500 円です。
 ```
