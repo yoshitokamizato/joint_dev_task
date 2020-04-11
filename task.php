@@ -127,33 +127,34 @@ $users = [
 
 echo PHP_EOL;
 
-class UserQ17
-  # 以下に回答を記載
-
-echo PHP_EOL;
-
 print("#####q17#####".PHP_EOL);
-  # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
-  user1 = UserQ17.new(name: "神里", age: 32, gender: "男")
-  user2 = UserQ17.new(name: "あじー", age: 32, gender: "男")
+class User
+{
 
-  user1.info
-  puts "-------------"
-  user2.info
-echo PHP_EOL;
+  # コードを追加
 
-class UserQ18
-  # 以下に回答を記載
+}
+
+$user1 = new User("神里",32,"男");
+$user2 = new User("あじー",32,"男");
+
+$user1->info();
+print("-------------".PHP_EOL);
+$user2->info();
 
 echo PHP_EOL;
 
 print("#####q18#####".PHP_EOL);
-  # ここは変更しないで下さい
-  user1 = UserQ18.new(name: "あじー", age: 32)
-  user2 = UserQ18.new(name: "ゆたぼん", age: 10)
+//Q17. 年齢を用いた場合分けを利用して，期待する出力結果になるようなUserクラスを作成して下さい。
 
-  puts user1.introduce
-  puts user2.introduce
+  # コードを追加
+
+$user1 = new User("神里",32);
+$user2 = new User("ゆたぼん",10);
+
+$user1->introduce();
+$user2->introduce();
+
 echo PHP_EOL;
 
 class Item
