@@ -145,15 +145,15 @@ $user2->info();
 echo PHP_EOL;
 
 print("#####q18#####".PHP_EOL);
-//Q17. 年齢を用いた場合分けを利用して，期待する出力結果になるようなUserクラスを作成して下さい。
+//Q18. 年齢を用いた場合分けを利用して，期待する出力結果になるようなManクラスを作成して下さい。
 
   # コードを追加
 
-$user1 = new User("神里",32);
-$user2 = new User("ゆたぼん",10);
+$man1 = new Man("あじー",32);
+$man2 = new Man("ゆたぼん",10);
 
-$user1->introduce();
-$user2->introduce();
+$man1->introduce();
+$man2->introduce();
 
 echo PHP_EOL;
 
