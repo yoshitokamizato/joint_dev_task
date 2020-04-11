@@ -145,7 +145,6 @@ $user2->info();
 echo PHP_EOL;
 
 print("#####q18#####".PHP_EOL);
-//Q18. 年齢を用いた場合分けを利用して，期待する出力結果になるようなManクラスを作成して下さい。
 
   # コードを追加
 
@@ -183,16 +182,31 @@ echo PHP_EOL;
 
 
 print("#####q20#####".PHP_EOL);
-  # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
-  zoo = Zoo.new(name: "旭山動物園", entry_fee: { infant: 0, children: 400, adult: 800, senior: 500 })
+class Human
+{
 
-  users = [
-    UserQ20.new(name: "たま", age: 3),
-    UserQ20.new(name: "ゆたぼん", age: 10),
-    UserQ20.new(name: "あじー", age: 32),
-    UserQ20.new(name: "ぎん", age: 108)
-  ]
+    # コードを追加
 
-  users.each do |user|
-    zoo.info_entry_fee(user)
+}
+
+class Zoo
+{
+    
+    # コードを追加
+    
+}
+
+$zoo = new Zoo("旭山動物園",[0,400,800,500]);
+
+$human1 = new Human("たま",3);
+$human2 = new Human("ゆたぼん",10);
+$human3 = new Human("あじー",32);
+$human4 = new Human("ぎん",108);
+
+$humans = [ $human1, $human2, $human3, $human4 ];
+
+foreach($humans as $human){
+    $zoo->info_entry_fee($human);
+}
+
 echo PHP_EOL;
