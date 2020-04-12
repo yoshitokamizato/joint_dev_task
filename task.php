@@ -156,47 +156,39 @@ $man2->introduce();
 
 echo PHP_EOL;
 
-class Item
+print("#####q19#####".PHP_EOL);
+class Item{
   # 以下を修正して下さい
 
-  def initialize(name)
-    @name = name
-  end
-echo PHP_EOL;
+  protected $name;
 
-print("#####q19#####".PHP_EOL);
-  # ここは変更しないで下さい
-  book = Item.new(name: "ゼロ秒思考")
-  puts book.name
-echo PHP_EOL;
+  function __construct($book_name){
+    $this->name = $book_name;
+  }
+}
+  # 以下は変更しないで下さい
 
-class UserQ20
-  # 以下に回答を記載
+$book = new Item("ゼロ秒思考");
+print($book->name.PHP_EOL);
 
 echo PHP_EOL;
-
-class Zoo
-  # 以下に回答を記載
-
-echo PHP_EOL;
-
 
 print("#####q20#####".PHP_EOL);
 class Human
 {
 
-    # コードを追加
+  # コードを追加
 
 }
 
 class Zoo
 {
     
-    # コードを追加
+  # コードを追加
     
 }
 
-$zoo = new Zoo("旭山動物園",[0,400,800,500]);
+$zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
 $human1 = new Human("たま",3);
 $human2 = new Human("ゆたぼん",10);
@@ -206,7 +198,7 @@ $human4 = new Human("ぎん",108);
 $humans = [ $human1, $human2, $human3, $human4 ];
 
 foreach($humans as $human){
-    $zoo->info_entry_fee($human);
+  $zoo->info_entry_fee($human);
 }
 
 echo PHP_EOL;
