@@ -1,24 +1,27 @@
-# 共同開発 Ruby 課題（応用）
+# 共同開発 PHP 課題（応用）
 
 ## 回答方法について
 
-- Ruby課題（基礎）を参照下さい
+- PHP課題（基礎）を参照下さい
 
 ## Q17. 次の Userクラス 内にinfoメソッドを追加し，期待する出力結果になるようにして下さい。
 
 ```
 class User
+{
 
-# コードを追加
+  # コードを追加
 
-end
+}
 
-user1 = User.new(name: "神里", age: 32, gender: "男")
-user2 = User.new(name: "あじー", age: 32, gender: "男")
+$user1 = new User("神里",32,"男");
+$user2 = new User("あじー",32,"男");
 
-user1.info
-puts "-------------"
-user2.info
+$user1->info();
+print("-------------".PHP_EOL);
+$user2->info();
+
+echo PHP_EOL;
 ```
 
 期待する出力結果
@@ -36,13 +39,15 @@ user2.info
 ## Q18. 年齢を用いた場合分けを利用して，期待する出力結果になるようなUserクラスを作成して下さい。
 
 ```
-# コードを追加
+  # コードを追加
 
-user1 = User.new(name: "あじー", age: 32)
-user2 = User.new(name: "ゆたぼん", age: 10)
+$man1 = new Man("あじー",32);
+$man2 = new Man("ゆたぼん",10);
 
-puts user1.introduce
-puts user2.introduce
+$man1->introduce();
+$man2->introduce();
+
+echo PHP_EOL;
 ```
 
 期待する出力結果
@@ -55,14 +60,19 @@ puts user2.introduce
 ## Q19. 次のコードはエラーが出ます。期待する出力結果となるようにコードを修正して下さい。
 
 ```
-class Item
-  def initialize(name)
-    @name = name
-  end
-end
+class Item{
 
-book = Item.new(name: "ゼロ秒思考")
-puts book.name
+  protected $name;
+
+  function __construct($book_name){
+    $this->name = $book_name;
+  }
+}
+
+$book = new Item("ゼロ秒思考");
+print($book->name.PHP_EOL);
+
+echo PHP_EOL;
 ```
 
 期待する出力結果
@@ -76,30 +86,34 @@ puts book.name
 - 年齢区分は，幼児(0〜5歳)，子供(6〜12歳)，成人(13〜64歳)，シニア(65〜120歳)の4パターンとします。（この範囲外の年齢については対処しなくてOKです）
 
 ```
-class User
+class Human
+{
 
   # コードを追加
 
-end
+}
 
 class Zoo
-
+{
+    
   # コードを追加
+    
+}
 
-end
+$zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
-zoo = Zoo.new(name: "旭山動物園", entry_fee: { infant: 0, children: 400, adult: 800, senior: 500 })
+$human1 = new Human("たま",3);
+$human2 = new Human("ゆたぼん",10);
+$human3 = new Human("あじー",32);
+$human4 = new Human("ぎん",108);
 
-users = [
-  User.new(name: "たま", age: 3),
-  User.new(name: "ゆたぼん", age: 10),
-  User.new(name: "あじー", age: 32),
-  User.new(name: "ぎん", age: 108)
-]
+$humans = [ $human1, $human2, $human3, $human4 ];
 
-users.each do |user|
-  zoo.info_entry_fee(user)
-end
+foreach($humans as $human){
+  $zoo->info_entry_fee($human);
+}
+
+echo PHP_EOL;
 ```
 
 期待する出力結果
