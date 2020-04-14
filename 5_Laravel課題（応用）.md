@@ -1,7 +1,14 @@
 # 共同開発 Laravel 課題（応用）
 
-## Laravel 課題1
+## 教材のご案内
 
+- LaravelQuest
+  - 参考リンク：https://yu-nocode.com/entry/laravel-quest-1/
+  - 第2~7回のPW：quest-academia
+
+## Laravel 課題8
+
+LaravelQuest1：https://yu-nocode.com/entry/laravel-quest-1/
 
 1. 今回作るアプリ内容をご確認下さい
 
@@ -15,7 +22,9 @@
 
 - 【テキスト教材】Laravelプロジェクトを開始/MVCを開設/Laravelサーバの起動
 
-## Laravel 課題2
+## Laravel 課題9
+
+LaravelQuest2：https://yu-nocode.com/entry/laravel-quest-2/
 
 1. Laravelプロジェクトの環境変数（DB名など）を設定し、MySQLとLaravelが正常に接続できるようにデータベースを作成して下さい
 
@@ -29,7 +38,9 @@
 
 - 【テキスト教材】シーディングで一括データ登録を行おう！
 
-## Laravel 課題3
+## Laravel 課題10
+
+LaravelQuest3：https://yu-nocode.com/entry/laravel-quest-3/
 
 1. トップページをつくり、ブラウザに表示させて下さい
 
@@ -39,7 +50,9 @@
 
 - 【テキスト教材】新規ユーザ登録機能をつくろう
 
-## Laravel 課題4
+## Laravel 課題11
+
+LaravelQuest4：https://yu-nocode.com/entry/laravel-quest-4/
 
 1. ログイン機能を実装し、ログイン・ログアウトを実行して下さい
 
@@ -49,7 +62,9 @@
 
 - 【テキスト教材】動画登録機能
 
-## Laravel 課題5
+## Laravel 課題12
+
+LaravelQuest5：https://yu-nocode.com/entry/laravel-quest-5/
 
 1. usersテーブルにchannelカラムを追加し、「チャンネル名の表示」「表示名の変更」機能を実装して下さい
 
@@ -59,11 +74,13 @@
 
 - 【テキスト教材】フォロー機能
 
-## Laravel 課題6
+## Laravel 課題13
+
+LaravelQuest6：https://yu-nocode.com/entry/laravel-quest-6/
 
 1. Laravelエラー、デバッグの方法について学習して下さい
 
-- 【テキスト教材】Laravelエラーについて
+- 【テキスト教材】Laravelエラーについて (https://yu-nocode.com/entry/laravel-quest-2/)
 
 2. 本講座のLaravelプロジェクトをGitのローカルリポジトリにステージ→コミットして下さい
 
@@ -73,7 +90,9 @@
 
 - 【テキスト教材】Herokuについて
 
-## Laravel 課題7
+## Laravel 課題14
+
+LaravelQuest7：https://yu-nocode.com/entry/laravel-quest-7/
 
 1. YouTube動画のタイトルを、YouTube APIから自動で取得できるように実装して下さい
 

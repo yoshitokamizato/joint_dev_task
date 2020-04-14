@@ -5,11 +5,9 @@ PHPの基礎力を高めることがプログラマーとしての生産性を�
 
 ## 回答方法について
 
-- 回答用のファイルを用意しております。[課題リポジトリ](https://github.com/yoshitokamizato/joint_dev_task)を Fork して clone してからご利用下さい。
+- 回答用のファイルを用意しております。[課題リポジトリ](https://github.com/yuya-ishikawa-qa/joint_dev_task)を Fork して clone してからご利用下さい。
 - 課題の回答は `task.php` をご利用下さい。
 - 出力を確認する際は，`$ php task.php` をターミナルから実行して下さい。
-
-- 回答手順の詳細を動画にしております。「[過去レッスンアーカイブ](https://w1581477116-8hw426585.slack.com/archives/CTK3SBDGT/p1581507819002800)」をご覧下さい。
 
 ## 提出方法について
 
