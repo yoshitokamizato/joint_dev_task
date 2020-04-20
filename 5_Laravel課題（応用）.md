@@ -4,7 +4,6 @@
 
 - LaravelQuest
   - 参考リンク：https://yu-nocode.com/entry/laravel-quest-1/
-  - 第2~7回のPW：quest-academia
 
 ## Laravel 課題8
 
