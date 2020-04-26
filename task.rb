@@ -7,7 +7,7 @@ def q1
   # 以下に回答を記載
   names << "斎藤"
   print names #["田中", "佐藤", "佐々木", "高橋", "斎藤"]
-end
+end 
 
 
 def q2
