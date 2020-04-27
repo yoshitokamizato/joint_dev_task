@@ -14,14 +14,16 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-
+  array1.push(array2)
+  array1.flatten!
+  p array1
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  p numbers.count(3)
 end
 
 def q4
