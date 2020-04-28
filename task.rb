@@ -56,7 +56,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  array = array.map(&:to_i)
+  array.map!(&:to_i)
   # 以下は変更しないで下さい
   p array
 end
@@ -98,8 +98,9 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  p sports.flatten
-  
+  sports.flatten.uniq.each.with_index(1) do |sport,i|
+    puts "No.#{i} #{sport}"
+  end
 end
 
 def q12
@@ -131,16 +132,10 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if data1.has_key?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
-  if data2.has_key?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
+  puts data1.has_key?(:age) ? "OK":"NG"
+    
+  puts data2.has_key?(:age) ? "OK":"NG"
+    
 
 end
 
