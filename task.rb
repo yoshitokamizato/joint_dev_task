@@ -155,10 +155,10 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  def initialize(name:,age:,gender:)
-     @name = name
-     @age = age
-     @gender = gender
+  def initialize(**params)
+     @name = params[:name]
+     @age = params[:age]
+     @gender = params[:gender]
   end
 
   def info
