@@ -208,7 +208,7 @@ class Item
     @name = name
   end
   def name
-    return @name
+    @name
   end
 end
 
