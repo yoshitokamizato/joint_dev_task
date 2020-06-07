@@ -6,7 +6,7 @@ def q1
 
   # 以下に回答を記載
   names << "斎藤"
-  puts names
+  p names
 
 end
 
