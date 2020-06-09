@@ -79,7 +79,7 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  puts names.map.with_index(1){ |name, index| "会員No.#{index} #{name}さん"}
 end
 
 def q10
