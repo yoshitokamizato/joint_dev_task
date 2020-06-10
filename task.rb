@@ -86,6 +86,7 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
+  puts foods.map { |food| "#{food}".include?("うに") ? "好物です" : "まぁまぁ好きです" }
 
 end
 
