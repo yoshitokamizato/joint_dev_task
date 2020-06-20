@@ -1,5 +1,13 @@
 # 共同開発 Ruby 課題（応用）
 
+## 教材のご案内
+
+- 逆転教材のテキスト教材
+  - オブジェクト指向
+- ドラクエ風ゲームプログラムを作ってみよう！
+  - [https://www.techpit.jp/courses/ruby-dragon-quest/lectures/12476434](https://www.techpit.jp/courses/ruby-dragon-quest/lectures/12476434)
+  - 無料の範囲内で課題を解く上で必要となる内容を学習できます
+
 ## 回答方法について
 
 - Ruby課題（基礎）を参照下さい

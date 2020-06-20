@@ -3,9 +3,12 @@
 ## 教材のご案内
 
 - 逆転教材の動画教材
+  - Webとは 〜 動的ページと静的ページ
+  - Ruby/Railsの環境構築1 〜 resourcesを使ったCRUDアプリの解説
 - 逆転教材のテキスト教材
-  - 環境構築の動画・テキスト教材も用意しております
-- 共同開発限定 過去の勉強会動画（第４回 〜 ）
+  - Ruby on Rails の環境構築
+  - Ruby on Rails の基本 〜 resources を使ったCRUD処理の実装
+- 共同開発限定 過去の勉強会動画（第４回 〜 第5回）
 
 ## 課題の提出方法
 
@@ -16,15 +19,12 @@
 
 - 課題のアプリを１つ作成する度に提出して下さい。
 
-- Rails のバージョンは，原則 5 系を指定して下さい。
-  - Rails 6 の場合，Javascript が関わる `Bootstrap`, `Chart.js`, `ActionCable` の導入方法が教材と異なります。
-
 - データベースは `PostgreSQL` を指定して進めて下さい。（最初の課題を除く）
   - あらかじめ `Homebrew` にインストールし，設定を行う必要があります。
 
 ```
-# （参考）PostgreSQLをデータベースに指定して Rails 5.2.4 のアプリを作成するコマンド
-$ rails _5.2.4_ new アプリ名 -d postgresql
+# （参考）PostgreSQLをデータベースに指定して Rails のアプリを作成するコマンド
+$ rails new アプリ名 -d postgresql
 ```
 
 - `.gitignore` に次を追加し，Gitの管理下から外すようにして下さい。
