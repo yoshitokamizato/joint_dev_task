@@ -94,7 +94,7 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  
+
   number = 1
     puts "ユーザーの趣味一覧"
   sports.flatten!.uniq!.each.with_index(1)do|sport,i|
@@ -144,9 +144,10 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  users.each do |user|
+    puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}です。"
+ end
 end
-
 class UserQ17
   # 以下に回答を記載
 
