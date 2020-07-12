@@ -2,18 +2,18 @@
 
 ## 教材のご案内
 
-- 逆転教材の動画教材
+- [逆転教材の動画](https://arcane-gorge-21903.herokuapp.com/movies)
   - Webとは 〜 動的ページと静的ページ
   - Ruby/Railsの環境構築1 〜 resourcesを使ったCRUDアプリの解説
-- 逆転教材のテキスト教材
+- [逆転教材のテキスト教材](https://arcane-gorge-21903.herokuapp.com/)
   - Ruby on Rails の環境構築
   - Ruby on Rails の基本 〜 resources を使ったCRUD処理の実装
-- 共同開発限定 過去の勉強会動画（第４回 〜 第5回）
+- [共同開発限定 過去の勉強会動画（第４回 〜 第5回）]((https://w1581477116-8hw426585.slack.com/archives/CTK3SBDGT))
 
 ## 課題の提出方法
 
 - 各課題ごとにGitHubリポジトリを作成し，プッシュして下さい。
-  - 課題ディレクトリ`joint_dev_task`内にRailsアプリを作成しないようにして下さい
+  - 課題ディレクトリ `joint_dev_task` 内にRailsアプリを作成しないようにして下さい
 
 ## 注意点
 
@@ -40,17 +40,14 @@ $ rails new アプリ名 -d postgresql
 ### Rails 課題1
 
 「Hello World」を表示するアプリを作成し，提出して下さい。
-- 【動画教材】 Hello World アプリの解説
-- 【テキスト教材】 Ruby on Rails で Hello World!!
+- [【テキスト教材】Ruby on Rails で Hello World!!](https://arcane-gorge-21903.herokuapp.com/texts/209)
 
 ### Rails 課題2
 
 1. `resources` を使わない「CRUDアプリ」を作成してコミットして下さい。
 
-- 【動画教材】resourcesを使わないCRUDアプリの解説
-- 【テキスト教材】CRUD処理の実装
+- [【テキスト教材】CRUD処理の実装](https://arcane-gorge-21903.herokuapp.com/texts/211)
 
 2. ブランチを切り替え， `resources` を使った「CRUDアプリ」に修正してプルリク を出し，提出して下さい。（マージはしないで下さい！）
 
-- 【動画教材】resourcesを使ったCRUDアプリの解説
-- 【テキスト教材】resources を使ったCRUD処理の実装
+- [【テキスト教材】resources を使ったCRUD処理の実装](https://arcane-gorge-21903.herokuapp.com/texts/214)
