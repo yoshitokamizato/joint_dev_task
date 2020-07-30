@@ -5,7 +5,7 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  puts names.push("斎藤")
+  puts names << ("斎藤")
 end
 
 def q2
@@ -13,8 +13,7 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-  array1.push(array2)
-  puts array1
+  puts array1 + array2
 end
 
 def q3
