@@ -2,9 +2,13 @@
 # 回答の出力を確認される際は，「ruby main.rb」をターミナルから実行して下さい。
 
 def q1
-  names = ["田中", "佐藤", "佐々木", "高橋"]
+  names = ["田中", "佐藤", "佐々木", "高橋","斎藤"]
 
-  # 以下に回答を記載
+ # 以下に回答を記載
+  names.each do |name|
+    puts "#{name}"
+
+  end
 
 end
 
@@ -13,6 +17,9 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
+  array1.push(array2)
+  array1.flatten!
+  p array1
 
 end
 
@@ -20,6 +27,7 @@ def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
+p numbers.count(3)
 
 end
 
