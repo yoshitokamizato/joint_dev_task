@@ -238,15 +238,15 @@ def initialize(**params)
 end
 
 def info_entry_fee(user)
-  case user.age 
+  info_entry_fee = case user.age 
   when 0..5
-    info_entry_fee = @infant 
+     @infant 
   when 6..12
-    info_entry_fee = @children 
+     @children 
   when 13..64
-    info_entry_fee = @adult
+     @adult
   else 65..120
-    info_entry_fee = @senior
+     @senior
   end
     puts "#{user.name}さんの入場料金は#{info_entry_fee}です。"
   end
