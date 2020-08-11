@@ -5,7 +5,7 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.push("斎藤")
+  names << "斎藤"
   puts names
 end
 
@@ -14,9 +14,9 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-  array1.push(array2)
-  array1.flatten!
-  p array1
+  new_array = array1 + array2
+  new_array.flatten!
+  p new_array
 end
 
 def q3
@@ -31,7 +31,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete(nil)
+  sports = sports.compact!
   # 以下は変更しないで下さい
   p sports
 end
