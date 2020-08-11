@@ -146,8 +146,8 @@ def q15
 
   # 以下に回答を記載
   array_data = [data1,data2]
-  array_data.each_key do |key|
-    if key.include?('age')
+  array_data.each do |data|
+    if data.include?(:age)
       puts 'OK'
     else
       puts 'NG'
