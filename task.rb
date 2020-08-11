@@ -41,21 +41,18 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-  new_arrays = [array1, array2]
-  new_arrays.each do |new_array|
-    p new_array
-    p new_array.empty?
-  end
+  new_array1 = array1.empty?
+  new_array2 = array2.empty?
+
+  puts new_array1
+  puts new_array2
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
-  numbers2 = []
   # 以下に回答を記載
-  numbers1.each do |number1|
-    numbers2.push(number1*2)
-  end
-  p numbers2
+  numbers_map = numbers1.map{|n| n*2}
+  p numbers_map
 end
 
 def q7
@@ -71,8 +68,8 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  programming_languages = %w(Ruby Php Python Javascript)
-  upper_case_programming_languages = %w(RUBY PHP PYTHON JAVASCRIPT)
+  programming_languages = programming_languages.map{|s| s.capitalize}
+  upper_case_programming_languages = programming_languages.map{|s| s.upcase}
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -105,12 +102,11 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  flat_sports = sports.flatten!
-  uniq_sports = flat_sports.uniq!
+  new_sports = sports.flatten!.uniq!
 
   puts "ユーザーの趣味一覧"
-  uniq_sports.each.with_index(1) do |uniq_sport,i|
-    puts "No#{i} #{uniq_sport}" 
+  new_sports.each.with_index(1) do |new_sport,i|
+    puts "No#{i} #{new_sport}" 
   end
 end
 
@@ -118,7 +114,9 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-
+  value_data = data.values
+  array_data = value_data[0]
+  puts array_data[:name]
 end
 
 def q13
@@ -126,14 +124,20 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  new_user_data = user_data.merge(update_data)
+  puts new_user_data
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
+  key_data = []
+  data.each_key do |key|
+    key_data << key
+  end
 
+  p key_data
 end
 
 def q15
@@ -141,7 +145,14 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+  array_data = [data1,data2]
+  array_data.each_key do |key|
+    if key.include?('age')
+      puts 'OK'
+    else
+      puts 'NG'
+    end
+  end
 end
 
 def q16
@@ -154,6 +165,9 @@ def q16
 
   # 以下に回答を記載
 
+  users.each_value do |value|
+    puts "私の名前は#{[:name]}です。年齢は#{[:age]}歳です。"
+  end
 end
 
 class UserQ17
