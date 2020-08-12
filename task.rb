@@ -112,9 +112,8 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-  value_data = data.values
-  array_data = value_data[0]
-  puts array_data[:name]
+  hash_name = data.dig(:user, :name )
+  puts hash_name
 end
 
 def q13
@@ -122,20 +121,16 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  new_user_data = user_data.merge(update_data)
-  puts new_user_data
+  user_data.merge!(update_data)
+  puts user_data
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-  key_data = []
-  data.each_key do |key|
-    key_data << key
-  end
-
-  p key_data
+  key_array = data.keys
+  p key_array
 end
 
 def q15
@@ -163,8 +158,8 @@ def q16
 
   # 以下に回答を記載
 
-  users.each_value do |value|
-    puts "私の名前は#{[:name]}です。年齢は#{[:age]}歳です。"
+  users.each do |user| 
+    puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
   end
 end
 
