@@ -194,7 +194,7 @@ end
 class UserQ18
   # 以下に回答を記載
   attr_accessor :name
-  attr_reader :age
+  attr_accessor :age
   def initialize(name:, age:)
     @name = name
     @age = age
