@@ -199,10 +199,10 @@ class UserQ18
 
   def introduce
     case
-      when @age.between?(18,120)
-        puts "こんにちは，#{@name}と申します。宜しくお願いいたします。"
-      when @age.between?(0,17)
-        puts "はいさいまいど〜，#{@name}です！！！"
+      when @age.between?(18,120) 
+        print "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+      when @age.between?(0,17) 
+        print "はいさいまいど〜，#{@name}です！！！"
     end 
   end
 end
