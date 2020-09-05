@@ -20,10 +20,10 @@ end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
+
+  # 以下に回答を記載
   # 配列「numbers」の中から要素「3」の数をカウントして出力
   puts numbers.count(3)
-  # 以下に回答を記載
-
 end
 
 def q4
