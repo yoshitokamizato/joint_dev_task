@@ -5,7 +5,8 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  # 配列「names」に"斎藤"を追加
+  puts names.push "斎藤"
 end
 
 def q2
@@ -13,12 +14,14 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-
+  # 配列「array1」と「array2」を結合
+  puts array = array1 + array2
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
-
+  # 配列「numbers」の中から要素「3」の数をカウントして出力
+  puts numbers.count(3)
   # 以下に回答を記載
 
 end
@@ -27,7 +30,8 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  # 配列「sports」の中から「nil」を削除して出力（破壊的メソッド）
+  p sports.delete(nil)
   # 以下は変更しないで下さい
   p sports
 end
