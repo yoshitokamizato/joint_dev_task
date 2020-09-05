@@ -41,21 +41,25 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  # 配列「array1」「array2」の要素が空であるかを判定し、boolで出力
+  p array1.empty?
+  p array2.empty?
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  # 配列「numbers1」の各要素を10倍して配列「numbers2」を作成、出力
+  puts numbers2 = numbers1.map {|n| n * 10}
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  # 配列「array」の要素を文字列から整数に変換
+  p array.map(&:to_i)
   # 以下は変更しないで下さい
   p array
 end
