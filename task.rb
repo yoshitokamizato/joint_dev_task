@@ -68,8 +68,8 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  programming_languages.map{|s| s.capitalize!}
-  upper_case_programming_languages = programming_languages.map{|s| s.upcase}
+  programming_languages.map(&:capitalize!)
+  upper_case_programming_languages = programming_languages.map(&:upcase)
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -89,11 +89,12 @@ def q10
 
   # 以下に回答を記載
   foods.each do |food|
-    if food.include?("うに")
-      puts "好物です"
-    else
-      puts "まぁまぁ好きです"
-    end
+    puts food.include?("うに") ? "好物です" : "まぁまぁ好きです"
+    # if food.include?("うに")
+    #   puts "好物です"
+    # else
+    #   puts "まぁまぁ好きです"
+    # end
   end
 end
 
@@ -101,14 +102,19 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-
+  puts "ユーザーの趣味一覧"
+  # flatten(キーと値を展開),uniq(重複を取り除く),each.with_index(繰り返し処理でインデックス番号をつける) 
+  sports.flatten.uniq.each.with_index(1) do |sport, i|
+    puts "No#{i} #{sport}"
+  end
 end
 
 def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
-
+  # ハッシュ「data」からnameの値を出力
+  p data[:user][:name]
 end
 
 def q13
@@ -116,14 +122,22 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  # update_dataのハッシュをuser_dataに統合（mergeする）
+  puts user_data.merge!(update_data)
 end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  # 空の配列「keys」を作る
+  keys = []
+  # キーの値を繰り返し取り出して、配列「keys」へ入れていく。
+  data.each_key do |key|
+    keys << key
+  end
+  # 配列「keys」を出力
+  p keys
 end
 
 def q15
@@ -131,7 +145,9 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-
+  # 三項演算子を活用。ハッシュがキー「age」を持っているかを条件として出力する言葉を分岐させる。
+  puts (data1.has_key?(:age)) ? "OK" : "NG"
+  puts (data2.has_key?(:age)) ? "OK" : "NG"
 end
 
 def q16
@@ -143,7 +159,11 @@ def q16
   ]
 
   # 以下に回答を記載
-
+  # 配列「users」の要素を変数「user」に代入して取り出し
+  users.each do |user|
+    # nameの値、ageの値をそれぞれ分けて出力
+    puts "「私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です」"
+  end
 end
 
 class UserQ17
