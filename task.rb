@@ -5,7 +5,7 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.push("斎藤")
+  names << "斎藤"
   p names
 
 end
@@ -32,7 +32,7 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete(nil)
+  sports.compact!
 
   # 以下は変更しないで下さい
   p sports
@@ -61,7 +61,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  array.map!{|a| a.to_i}
+  array.map!(&:to_i)
   # 以下は変更しないで下さい
   p array
 end
@@ -70,8 +70,8 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  programming_languages = programming_languages.map{|p| p.capitalize}
-  upper_case_programming_languages = programming_languages.map{|p| p.upcase}
+  programming_languages.map!(&:capitalize)
+  upper_case_programming_languages = programming_languages.map(&:upcase)
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -81,8 +81,8 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.each_index do |i|
-    puts "会員No.#{i + 1} #{names[i]}さん"
+  names.each.with_index(1) do |name, i|
+    puts "会員No.#{i} #{name}さん"
   end
 
 end
@@ -92,7 +92,7 @@ def q10
 
   # 以下に回答を記載
   foods.each do |food|
-    if(food.include?("うに") == true)
+    if(food.include?("うに"))
       puts "「#{food}」は「好物です」"
     else
       puts "「#{food}」は「まぁまぁ好きです」"
@@ -105,19 +105,11 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-    flatten_sports = sports.flatten
-    flatten_unique_sports = []
-  # flatten_unique_sports = sports.flatten.uniq
-
-    flatten_sports.each do |s|
-      if(!flatten_unique_sports.include?(s))
-        flatten_unique_sports.push(s)
-      end
-    end
+  flatten_unique_sports = sports.flatten.uniq
 
   puts "ユーザーの趣味一覧"
-  flatten_unique_sports.each_index do |i|
-    puts "No#{i + 1} #{flatten_unique_sports[i]}"
+  flatten_unique_sports.each.with_index(1) do |sport, i|
+    puts "No#{i} #{sport}"
   end
 
 end
@@ -135,11 +127,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  update_key_data = update_data.keys
-
-  update_key_data.each do |key|
-    user_data[key] = update_data[key]
-  end
+  user_data.merge!(update_data)
 
   p user_data
 
@@ -159,11 +147,15 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if (data1.keys.include?(:age))
+  if data1.has_key?(:age)
     puts "OK"
+  else
+    puts "NG"
   end
 
-  if (!data2.keys.include?(:age))
+  if data2.has_key?(:age)
+    puts "OK"
+  else
     puts "NG"
   end
 
