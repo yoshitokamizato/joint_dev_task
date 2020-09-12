@@ -148,7 +148,16 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
+  def Key(data)
+  if data.has_key?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end 
+  end 
 
+  Key(data1)
+  Key(data2)
 end
 
 def q16
