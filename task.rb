@@ -125,7 +125,13 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+  user_data[:age]=32
+  user_data[:address]="沖縄"
+  puts user_data
+  puts "名前:#{user_data[:name]}"
+  puts "年齢:#{user_data[:age]}"
+  puts "住所:#{user_data[:address]}"
+  
 end
 
 def q14
