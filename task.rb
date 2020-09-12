@@ -102,11 +102,10 @@ def q11
 
   # 以下に回答を記載
   puts "ユーザーの趣味一覧"
-  sports.each do |sports_item|
-    sports_item.each.with_index do |item,i|
-       puts "NO#{i} #{item}"
-    end
-   
+  sports.flatten! #多次元を一次元配列に変更
+  sports.uniq! #重複を削除
+  sports.each.with_index(1) do |sports_item,i|
+    puts  "NO.#{i} #{sports_item}"
   end 
 
 end
