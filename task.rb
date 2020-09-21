@@ -51,7 +51,7 @@ def q6
 
   # 以下に回答を記載
   # 配列「numbers1」の各要素を10倍して配列「numbers2」を作成、出力
-  puts numbers2 = numbers1.map {|n| n * 10}
+  puts numbers2 = numbers1.map { |n| n * 10 }
 end
 
 def q7
@@ -80,7 +80,7 @@ def q9
 
   # 以下に回答を記載
   names.each.with_index(1) do |name, i|
-      puts "会員No.#{i} #{name}さん"
+    puts "会員No.#{i} #{name}さん"
   end
 end
 
@@ -103,7 +103,7 @@ def q11
 
   # 以下に回答を記載
   puts "ユーザーの趣味一覧"
-  # flatten(キーと値を展開),uniq(重複を取り除く),each.with_index(繰り返し処理でインデックス番号をつける) 
+  # flatten(キーと値を展開),uniq(重複を取り除く),each.with_index(繰り返し処理でインデックス番号をつける)
   sports.flatten.uniq.each.with_index(1) do |sport, i|
     puts "No#{i} #{sport}"
   end
@@ -155,7 +155,7 @@ def q16
     { name: "satou", age: 22 },
     { name: "yamada", age: 12 },
     { name: "takahashi", age: 32 },
-    { name: "nakamura", age: 41 }
+    { name: "nakamura", age: 41 },
   ]
 
   # 以下に回答を記載
@@ -168,7 +168,21 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  attr_accessor :name, :age, :gender
 
+  def initialize(name:, age:, gender:)
+    @name = name
+    @age = age
+    @gender = gender
+  end
+
+  def info
+    puts <<~TEXT
+           名前：#{@name}
+           年齢：#{@age}
+           性別：#{@gender}
+         TEXT
+  end
 end
 
 def q17
@@ -183,7 +197,14 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 
+  def introduce
+    puts @age > 20 ? "こんにちは，#{@name}と申します。宜しくお願いいたします。" : "はいさいまいど〜，#{@name}です！！！"
+  end
 end
 
 def q18
@@ -197,8 +218,9 @@ end
 
 class Item
   # 以下を修正して下さい
+  attr_accessor :name
 
-  def initialize(name)
+  def initialize(name:)
     @name = name
   end
 end
@@ -211,14 +233,22 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_accessor :name, :age
 
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 end
 
 class Zoo
   # 以下に回答を記載
 
-end
+  # "#{@name}の入場料金は#{entry_fee[@age]}円です。"
 
+  # def info_entry_fee
+  # end
+end
 
 def q20
   # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
@@ -228,7 +258,7 @@ def q20
     UserQ20.new(name: "たま", age: 3),
     UserQ20.new(name: "ゆたぼん", age: 10),
     UserQ20.new(name: "あじー", age: 32),
-    UserQ20.new(name: "ぎん", age: 108)
+    UserQ20.new(name: "ぎん", age: 108),
   ]
 
   users.each do |user|
