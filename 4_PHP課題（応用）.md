@@ -129,45 +129,46 @@ echo PHP_EOL;
 
 仕様
 
+- 空文字をresultとして定義
 - 1から30までの正の整数で
 - 3の倍数でFizzを出力
 - 5の倍数でBuzzを出力
 - 15の倍数でFizzBuzzを出力
-- 4の倍数は出力しない（ただし、3でも割り切れる場合はFizz、5でも割り切れる場合はBuzzと出力）
-- それ以外は数字をそのまま出力する
-
-条件
-
-- forメソッドを使わない
-- rangeメソッドを使う
+- 7の倍数でHogeを出力
+- 11の倍数でPiyoを出力
+- それ以外はresultを出力
 
 期待する出力結果
 
 ```
-1
-2
+
+
 Fizz
+
 Buzz
 Fizz
-7
+Hoge
+
 Fizz
 Buzz
-11
+Piyo
 Fizz
-13
-14
+
+Hoge
 FizzBuzz
-17
+
+
 Fizz
-19
+
 Buzz
 Fizz
-22
-23
+Piyo
+
 Fizz
 Buzz
-26
+
 Fizz
-29
-FizzBuzz
+Hoge
+
+FizzBuzzFizzBuzz
 ````
