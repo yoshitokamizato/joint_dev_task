@@ -168,7 +168,7 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  attr_accessor :name, :age, :gender
+  # attr_accessor :name, :age, :gender
 
   def initialize(name:, age:, gender:)
     @name = name
@@ -218,7 +218,8 @@ end
 
 class Item
   # 以下を修正して下さい
-  attr_accessor :name
+  attr_reader :name
+  # attr_accessor :name
 
   def initialize(name:)
     @name = name
@@ -233,7 +234,7 @@ end
 
 class UserQ20
   # 以下に回答を記載
-  attr_accessor :name, :age
+  attr_reader :name, :age
 
   def initialize(name:, age:)
     @name = name
@@ -243,11 +244,24 @@ end
 
 class Zoo
   # 以下に回答を記載
+  def initialize(**params)
+    @entry_fee = params[:entry_fee]
+  end
 
-  # "#{@name}の入場料金は#{entry_fee[@age]}円です。"
+  def info_entry_fee(user)
+    fee = case user.age
+      when 0..5
+        @entry_fee[:infant]
+      when 6..12
+        @entry_fee[:children]
+      when 13..64
+        @entry_fee[:adult]
+      when 65..120
+        @entry_fee[:senior]
+      end
 
-  # def info_entry_fee
-  # end
+    puts "#{user.name}さんの入場料金は#{fee}円です。"
+  end
 end
 
 def q20
