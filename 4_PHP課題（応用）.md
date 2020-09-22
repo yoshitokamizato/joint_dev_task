@@ -124,3 +124,51 @@ echo PHP_EOL;
 あじーさんの入場料金は 800 円です。
 ぎんさんの入場料金は 500 円です。
 ```
+
+## Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて下さい。
+
+仕様
+
+- 1から30までの正の整数で
+- 3の倍数でFizzを出力
+- 5の倍数でBuzzを出力
+- 7の倍数でHogeを出力
+- 11の倍数でPiyoを出力
+- それ以外は数値を出力
+
+※但し15はFizzBuzz, 21はFizzHogeなど、公倍数は複数単語が出力されるようにすること。
+
+期待する出力結果
+
+```
+1
+2
+Fizz
+4
+Buzz
+Fizz
+Hoge
+8
+Fizz
+Buzz
+Piyo
+Fizz
+13
+Hoge
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+FizzHoge
+Piyo
+23
+Fizz
+Buzz
+26
+Fizz
+Hoge
+29
+FizzBuzz
+```

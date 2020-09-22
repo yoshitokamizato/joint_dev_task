@@ -400,3 +400,51 @@ foreach($humans as $human){
 }
 
 echo PHP_EOL;
+
+
+print("#####q21#####".PHP_EOL);
+//Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて下さい。
+
+//回答例1
+
+for($i = 1; $i <= 30; $i++){
+    if( $i % 15 == 0) {
+        echo 'FizzBuzz'. PHP_EOL;
+    }elseif($i % 21 == 0 ){
+        echo 'FizzHoge'. PHP_EOL;
+    }elseif($i % 3 == 0 ){
+        echo 'Fizz'. PHP_EOL;
+    }elseif($i % 5 == 0 ){
+        echo 'Buzz'. PHP_EOL;
+    }elseif($i % 7 == 0 ){
+        echo 'Hoge'. PHP_EOL;
+    } elseif($i % 11 == 0){
+        echo 'Piyo'. PHP_EOL;
+    }else{
+        echo $i. PHP_EOL;
+    }
+}
+
+//回答例2
+
+for ($i = 1; $i <= 30; $i++){
+    $result = '';
+
+    if ($i % 3 == 0 ){
+        $result .= 'Fizz';
+    }
+    if ($i % 5 == 0 ){
+            $result .= 'Buzz';
+        }
+    if ($i % 7 == 0 ){
+            $result .= 'Hoge';
+        }
+    if ($i % 11 == 0){
+            $result .= 'Piyo';
+        }
+    if ($result == '') {
+            $result .= (string) $i;
+        }
+
+    echo $result. PHP_EOL;
+}

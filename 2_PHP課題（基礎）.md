@@ -3,6 +3,11 @@ PHPの基礎力を高めることがプログラマーとしての生産性を�
 
 現場に入った時にコードをスラスラ書くためにも，スラスラ読み解くためにも，ぜひ問題をこなして基礎力を磨いていって下さい。
 
+## 教材のご案内
+
+- 逆転教材のPHP講座
+  - 参考リンク：https://arcane-gorge-21903.herokuapp.com/texts?genre=Php
+
 ## 回答方法について
 
 - 回答用のファイルを用意しております。[課題リポジトリ](https://github.com/yuya-ishikawa-qa/joint_dev_task)を Fork して clone してからご利用下さい。
