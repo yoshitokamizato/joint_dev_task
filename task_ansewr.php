@@ -400,3 +400,23 @@ foreach($humans as $human){
 }
 
 echo PHP_EOL;
+
+
+print("#####q21#####".PHP_EOL);
+//Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて下さい。
+
+foreach(range(1, 30) as $num) {
+    if($num % 15 == 0) {
+        echo 'FizzBuzz'. PHP_EOL;
+    }elseif($num % 3 == 0 ){
+        echo 'Fizz'. PHP_EOL;
+    }elseif($num % 5 == 0 ){
+        echo 'Buzz'. PHP_EOL;
+    }elseif($num % 4 == 0 ){
+        continue;
+    }else{
+        echo $num. PHP_EOL;
+    }
+}
+
+echo PHP_EOL;
