@@ -94,7 +94,7 @@ def q10
     puts "まあまあ好きです"
   end
 
-  end
+end
 end
 
 def q11
@@ -102,6 +102,11 @@ def q11
 
   # 以下に回答を記載
 
+  sports.flatten!.uniq!
+  puts "ユーザーの趣味一覧"
+  sports.each.with_index do |sport, i|
+  puts "NO,#{i+1} #{sport}"
+end
 end
 
 def q12
