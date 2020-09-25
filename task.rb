@@ -99,9 +99,9 @@ def q11
 
   # 以下に回答を記載
 
-  sports.flatten!.uniq!
+
   puts "ユーザーの趣味一覧"
-  sports.each.with_index do |sport, i|
+  sports.flatten!.uniq!.each.with_index do |sport, i|
   puts "NO,#{i+1} #{sport}"
 end
 end
