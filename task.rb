@@ -88,11 +88,8 @@ def q10
 
   # 以下に回答を記載
   foods.each do |food|
-   if food.include?("うに")
-    puts "好物です"
-  elsif
-    puts "まあまあ好きです"
-  end
+   puts food.include?("うに") ? "好物です" : "まあまあ好きです"
+
 
 end
 end
