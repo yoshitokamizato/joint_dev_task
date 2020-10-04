@@ -19,6 +19,8 @@
 
 - 課題のアプリを１つ作成する度に提出して下さい。
 
+- 「テキスト教材」をベースに課題を進めて下さい。
+
 - データベースは `PostgreSQL` を指定して進めて下さい。（最初の課題を除く）
   - あらかじめ `Homebrew` にインストールし，設定を行う必要があります。
 
@@ -48,6 +50,6 @@ $ rails new アプリ名 -d postgresql
 
 - [【テキスト教材】CRUD処理の実装](https://arcane-gorge-21903.herokuapp.com/texts/211)
 
-2. ブランチを切り替え， `resources` を使った「CRUDアプリ」に修正してプルリク を出し，提出して下さい。（マージはしないで下さい！）
+2. `feature/resources` ブランチを作成して切り替え， `resources` を使った「CRUDアプリ」に修正してプルリク を出し，提出して下さい。（マージはしないで下さい！）
 
 - [【テキスト教材】resources を使ったCRUD処理の実装](https://arcane-gorge-21903.herokuapp.com/texts/214)
