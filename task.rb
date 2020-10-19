@@ -153,7 +153,6 @@ end
 class UserQ17
   # 以下に回答を記載
   def initialize(**params)
-    @info = params[:info]
     @name = params[:name]
     @age = params[:age]
     @gender = params[:gender]
@@ -186,7 +185,7 @@ class UserQ18
   end
 
    def introduce 
-  @age > 11 ? "こんにちは,#{@name}と申します。宜しくお願いいたします。" :
+  @age >= 20 ? "こんにちは,#{@name}と申します。宜しくお願いいたします。" :
   "はいさいまいど〜,#{@name}です!!!"
    end
 end
