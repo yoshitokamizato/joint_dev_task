@@ -150,7 +150,7 @@ Hoge
 8
 Fizz
 Buzz
-Piyo
+11
 Fizz
 13
 Hoge
@@ -161,7 +161,7 @@ Fizz
 19
 Buzz
 FizzHoge
-Piyo
+22
 23
 Fizz
 Buzz
