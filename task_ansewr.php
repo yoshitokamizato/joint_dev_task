@@ -43,7 +43,7 @@ echo PHP_EOL;
 
 
 print("#####q4#####".PHP_EOL);
-//Q4. 次の配列から nil の要素を削除し，出力して下さい。（新しい配列を作成せずに実現して下さい）
+//Q4. 次の配列から null の要素を削除し，出力して下さい。（新しい配列を作成せずに実現して下さい）
 //キーワード：配列 特定　重複　削除
 
 $sports = ["サッカー", "フットサル", null, "野球", "バスケ", null, "バレー"];
@@ -349,14 +349,6 @@ class Human
     function __construct($user_name,$user_age)    {
         $this->name = $user_name;
         $this->age = $user_age;
-    }
-    
-    function introduce() {
-        if($this->age >= 20){
-            print("こんにちは,".$this->name."と申します。宜しくお願いいたします。".PHP_EOL);
-        }else{
-            print("はいさいまいど〜，".$this->name."です！！！".PHP_EOL);
-        }
     }
 
 }
