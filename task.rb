@@ -6,7 +6,6 @@ def q1
 
   # 以下に回答を記載
   names << "斎藤"
-  p names
 end
 
 def q2
@@ -14,15 +13,14 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-  array = array1 | array2
-  p array
+　array = array1 | array2
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-  p numbers.count(3)
+  numbers.count(3)
 end
 
 def q4
@@ -47,14 +45,15 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  new_numbers = numbers1.map{ |n| n * 10}
+  p new_numbers
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  array.map!(&:to_i)
   # 以下は変更しないで下さい
   p array
 end
