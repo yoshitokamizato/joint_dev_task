@@ -5,7 +5,9 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  p names << "斎藤"
+  # 配列への追加２つ目
+  p names.push "斎藤"
 end
 
 def q2
@@ -13,23 +15,26 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-
+  p array = array1 + array2
+  # concatメソッドを使用しようと思いましたが前のarray1の配列を残した方がいいのかわからなかったので使用しませんでした
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  p numbers.count(3)
 end
 
 def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  sports.compact!
   # 以下は変更しないで下さい
   p sports
+  #delete(nil) や  - nil でも同様なことができると思いましたが、おそらくcompact!使うのが最善だと思い解答にしました。
+
 end
 
 def q5
@@ -37,21 +42,24 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  p array1.empty?
+  p array2.empty?
+  
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  p numbers1.map{|number| number*10}
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  array.map!(&:to_i)
+  # do~each や {}を使用しようと思いましたが処理が短いのでせっかくなら &:使いたかったのでこちらを使用しました
   # 以下は変更しないで下さい
   p array
 end
@@ -60,7 +68,8 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-
+  programming_languages.map(&:capitalize!)
+  upper_case_programming_languages = programming_languages.map(&:upcase)
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
