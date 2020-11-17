@@ -46,6 +46,8 @@ $ rails new アプリ名 -d postgresql
 
 ### Rails 課題2
 
+両方が完了した時点で提出して下さい。
+
 1. `resources` を使わない「CRUDアプリ」を作成してコミットして下さい。
 
 - [【テキスト教材】CRUD処理の実装](https://arcane-gorge-21903.herokuapp.com/texts/211)
