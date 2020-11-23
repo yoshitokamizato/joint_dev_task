@@ -7,3 +7,4 @@ require './message'
 management = Management.new
 management.prompt_input
 management.output_answer
+
