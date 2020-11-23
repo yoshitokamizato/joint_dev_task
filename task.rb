@@ -36,24 +36,35 @@ end
 
 def q5
 
-  array1 = []
-  array2 = [1, 5, 8, 10]
+  # array1 = []
+  # array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
 
+array1 = []
+  print "配列１実行結果："
+  p array1.empty?
+
+  array2 = [1, 5, 8, 10]
+  print "配列２実行結果："
+  p array2.empty?
+ 
+end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  puts "map"
+  numbers1_map = numbers1.map{ |n| n * 10 }
+  p numbers1_map
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  integers = array.map!{|n| n.to_i}
   # 以下は変更しないで下さい
   p array
 end

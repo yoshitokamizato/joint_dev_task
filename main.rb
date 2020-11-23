@@ -8,7 +8,3 @@ management = Management.new
 management.prompt_input
 management.output_answer
 
-array2 = [1, 5, 8, 10]
-
-  # 以下に回答を記載
- 
