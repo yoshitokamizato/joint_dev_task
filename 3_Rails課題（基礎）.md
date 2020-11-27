@@ -2,13 +2,11 @@
 
 ## 教材のご案内
 
-- [逆転教材の動画](https://arcane-gorge-21903.herokuapp.com/movies)
-  - Webとは 〜 動的ページと静的ページ
-  - Ruby/Railsの環境構築1 〜 resourcesを使ったCRUDアプリの解説
 - [逆転教材のテキスト教材](https://arcane-gorge-21903.herokuapp.com/)
   - Ruby on Rails の環境構築
   - Ruby on Rails の基本 〜 resources を使ったCRUD処理の実装
-- [共同開発限定 過去の勉強会動画（第４回 〜 第5回）]((https://w1581477116-8hw426585.slack.com/archives/CTK3SBDGT))
+- [逆転教材の動画](https://arcane-gorge-21903.herokuapp.com/movies)
+  - エンジニアになるために大切な5つの考え方【前半】 〜 動的ページと静的ページ
 
 ## 課題の提出方法
 

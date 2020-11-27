@@ -13,12 +13,22 @@ Rubyの基礎力を高めることがプログラマーとしての生産性を�
 
 ## 回答方法について
 
-- 回答用のファイルを用意しております。[課題リポジトリ](https://github.com/yoshitokamizato/joint_dev_task)を Fork して clone してからご利用下さい。
+- 回答用のファイルを用意しております。下記リポジトリを Fork してから clone してご利用下さい。
+
+1. [課題リポジトリ](https://github.com/yoshitokamizato/joint_dev_task) にアクセス
+2. 「Fork」をクリック
+
+![Fork](./images/fork.png)
+
+3. リポジトリのURLをコピー
+
+![Clone](./images/clone.png)
+
+4. ターミナルで（作業ディレクトリまで移動してから） `git clone コピーしたURL` を実行
+
 - 課題の回答は `task.rb` をご利用下さい。
 - 出力を確認する際は，`$ ruby main.rb` をターミナルから実行して下さい。
   - 実行する問題番号として，例えば`3`を入力しますと，`q3`メソッドが実行される仕組みです。
-
-- 回答手順の詳細を動画にしております。「[過去レッスンアーカイブ](https://w1581477116-8hw426585.slack.com/archives/CTK3SBDGT/p1581507819002800)」をご覧下さい。
 
 ## 提出方法について
 
