@@ -244,13 +244,24 @@ class Zoo
   end
 
   def entry_fee_judge(user)
-    if user.age <= 7 && user.age >= 0
+    # if user.age <= 7 && user.age >= 0
+    #   @entry_fee[:infant]
+    # elsif user.age <= 18
+    #   @entry_fee[:children]
+    # elsif user.age <= 65
+    #   @entry_fee[:adult]
+    # else
+    #   @entry_fee[:senior]
+    # end
+
+    case user.age
+    when 0..7
       @entry_fee[:infant]
-    elsif user.age <= 18
+    when 8..18
       @entry_fee[:children]
-    elsif user.age <= 65
+    when 19..65
       @entry_fee[:adult]
-    else
+    when 66..125
       @entry_fee[:senior]
     end
   end
