@@ -51,8 +51,7 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2
-  
+
 end
 
 def q7
