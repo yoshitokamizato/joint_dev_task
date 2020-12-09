@@ -2,10 +2,11 @@
 # 回答の出力を確認される際は，「ruby main.rb」をターミナルから実行して下さい。
 
 def q1
-  names = ["田中", "佐藤", "佐々木", "高橋"]
+  names = ["田中", "佐藤", "佐々木", "高橋", "斎藤"]
 
   # 以下に回答を記載
-
+  # puts name 
+ p names
 end
 
 def q2
@@ -13,21 +14,27 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
+  array1.push(array2)
+  array1.flatten!
+  # puts array1 確認したURL https://qiita.com/na1412/items/65f883896c85011d6509
+  p array1
 
 end
 
 def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
+  # array = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-
+  p numbers.count(3)
+  # p array.count(1)
 end
 
 def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  sports.compact!
   # 以下は変更しないで下さい
   p sports
 end
