@@ -5,7 +5,7 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.push("斎藤")
+  names << "斎藤"
   print names #["田中", "佐藤", "佐々木", "高橋", "斎藤"]
 end
 
@@ -43,14 +43,16 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  p array1. empty?
+  p array2. nil?
 end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  numbers2
+  
 end
 
 def q7
