@@ -5,6 +5,8 @@ def q1
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+  names << "斎藤"
+  puts names
 
 end
 
@@ -13,6 +15,12 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
+  array1.concat(array2)
+  p array1
+
+  # array1 = array1 + array2も同じ結果。
+  # 「concat」と「+」の違いは見つけられず。
+  # 「concat」の方が文字数が少なくなるので「concat」にしてみました。
 
 end
 
@@ -20,6 +28,7 @@ def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
+  p numbers.count(3)
 
 end
 
@@ -27,7 +36,10 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-
+  sports.delete(nil)
+  # sports.reject!{|r| r == nil}でも動作。
+  # 非破壊的は➡sports.reject{|r| r == nil}
+  
   # 以下は変更しないで下さい
   p sports
 end
