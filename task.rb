@@ -18,7 +18,7 @@ def q2
   array1.concat(array2)
   p array1
 
-  # array1 = array1 + array2も同じ結果。
+  # array1 = array1 + array2でも動作。
   # 「concat」と「+」の違いは見つけられず。
   # 「concat」の方が文字数が少なくなるので「concat」にしてみました。
 
@@ -36,7 +36,8 @@ def q4
   sports = ["サッカー", "フットサル", nil, "野球", "バスケ", nil, "バレー"]
 
   # 以下に回答を記載
-  sports.delete(nil)
+  sports.compact!
+  # sports.delete(nil)とか
   # sports.reject!{|r| r == nil}でも動作。
   # 非破壊的は➡sports.reject{|r| r == nil}
   
