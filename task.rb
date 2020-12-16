@@ -15,12 +15,8 @@ def q2
   array2 = ["bird", "bat", "tiger"]
 
   # 以下に回答を記載
-  array1.concat(array2)
+  array1 = array1 + array2
   p array1
-
-  # array1 = array1 + array2でも動作。
-  # 「concat」と「+」の違いは見つけられず。
-  # 「concat」の方が文字数が少なくなるので「concat」にしてみました。
 
 end
 
@@ -50,6 +46,8 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
+  p array1.empty?
+  p array2.empty?
 
 end
 
@@ -57,6 +55,8 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
+  numbers2 = numbers1.map{ |n| n * 10}
+  p numbers2
 
 end
 
@@ -64,7 +64,13 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  array.map!(&:to_i)
+  # array.map!{|num| num.to_i}
+  # mapはブロックか、オブジェクト化されたブロックしか引数にとれない。
+  # オブジェクト化されたブロックを引数に取るときは&をつける。
+  # ブロックをオブジェクト化するには通常prc = Proc.new{|num| num.to_i}
+  # だけどto_iはシンボルにすると自動的にオブジェクト化される（このあたりがよくわからない）
+  # から、:to_iを&でつなぐだけでよい。
   # 以下は変更しないで下さい
   p array
 end
