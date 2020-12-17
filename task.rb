@@ -65,39 +65,64 @@ def q7
 
   # 以下に回答を記載
   array.map!(&:to_i)
-  # array.map!{|num| num.to_i}
-  # mapはブロックか、オブジェクト化されたブロックしか引数にとれない。
-  # オブジェクト化されたブロックを引数に取るときは&をつける。
-  # ブロックをオブジェクト化するには通常prc = Proc.new{|num| num.to_i}
-  # だけどto_iはシンボルにすると自動的にオブジェクト化される（このあたりがよくわからない）
-  # から、:to_iを&でつなぐだけでよい。
+
   # 以下は変更しないで下さい
   p array
 end
+  ### Q7:整理するための箇条書き ###
+  # 省略前：array.map!{|num| num.to_i}
+  # mapはブロックか、オブジェクト化されたブロックしか引数にとれない。
+  # オブジェクト化されたブロックを引数に取るときは&をつける。
+  # ブロックをオブジェクト化するには通常prc = Proc.new{|num| num.to_i}
+  # だけどto_iはシンボルにすると自動的にオブジェクト化される（to_procメソッド？このあたりがよくわからない）
+  # から、:to_iを&でつなぐだけでよい。
+  ################################
+
 
 def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-
+  programming_languages.map!(&:capitalize)
+  upper_case_programming_languages = programming_languages.map(&:upcase)
+  
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
 end
+  ### 整理するための箇条書き ###
+  # upper_case_programming_languages = programming_languages.map{|lang| lang.upcase}
+  # capitalizeもupcaseもto_procメソッド？
+  ##################################
 
 def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.each.with_index(1) do |name,i|
+    puts("会員No.#{i} #{name}さん")
+  end
 end
 
 def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-
+  foods.each do |food|
+    puts food.include?("うに") ? "#{food}:好物です" : "#{food}:まあまあ好きです"
+  end
 end
+  ### 整理するための箇条書き ###
+  # if food.include?("うに")
+  #  puts "好物です"
+  # else
+  #  puts "まあまあ好きです"
+  # end
+  # を三項演算子で短くしてみた。
+  # 問題と出力結果があっているかわかりづらかったので、要素も出力
+  ##################################
+
+
 
 def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
