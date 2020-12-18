@@ -87,7 +87,7 @@ def q9
 
   # 以下に回答を記載
   names.each.with_index(1) do |name,i|
-    puts("会員No.#{i} #{name}さん")
+    puts "会員No.#{i} #{name}さん"
   end
 end
 
@@ -106,11 +106,10 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  text = "ユーザーの趣味一覧\n"
+  puts "ユーザーの趣味一覧\n"
   sports.flatten.uniq.each.with_index(1) do |sport, i|
-    text += ("No#{i} #{sport}\n")
+    puts "No#{i} #{sport}\n"
   end
-  puts text
 end
 
 def q12
