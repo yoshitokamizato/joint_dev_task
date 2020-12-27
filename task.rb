@@ -51,7 +51,7 @@ end
 def q6
   numbers1 = [1, 2, 3, 4, 5]
   # 以下に回答を記載
-  numbers2 = numbers1.map!(&:to_i)
+  numbers2 = numbers1.map!{ |x| x * 10 }
 
   p numbers2
 end
@@ -69,7 +69,8 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-
+    upper_case_programming_languages = programming_languages.map(&:upcase)
+  programming_languages = programming_languages.map(&:capitalize)
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -79,7 +80,11 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  i = 2
+  names.each do |name|
+    p "会員No." + i + name
+    i = i + 1
+  end
 end
 
 def q10
