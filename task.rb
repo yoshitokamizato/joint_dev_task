@@ -50,12 +50,8 @@ end
 
 def q6
   numbers1 = [1, 2, 3, 4, 5]
-  numbers2 = []
   # 以下に回答を記載
-  numbers1.each do |number|
-  number = number * 10
-  numbers2<<(number)
-  end
+  numbers2 = numbers1.map!(&:to_i)
 
   p numbers2
 end
@@ -64,7 +60,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-  array.map!(&:to_i)
+
   # 以下は変更しないで下さい
   p array
 end
