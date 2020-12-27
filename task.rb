@@ -51,7 +51,7 @@ end
 def q6
   numbers1 = [1, 2, 3, 4, 5]
   # 以下に回答を記載
-  numbers2 = numbers1.map!{ |x| x * 10 }
+  numbers2 = numbers1.map{ |namuber| namuber * 10 }
   p numbers2
 end
 
@@ -59,6 +59,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
+    array.map!(&:to_i)
   # 以下は変更しないで下さい
   p array
 end
@@ -67,7 +68,8 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-
+  upper_case_programming_languages = programming_languages.map(&:upcase)
+  programming_languages = programming_languages.map(&:capitalize)
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -77,20 +79,36 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  namuber = 2
+  names.each do |name|
+    puts "会員No." + namuber.to_s + " " + name
+    namuber = namuber + 1
+  end
 end
 
 def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-
+  if foods.include?("うに")
+    p true
+  else
+    p false
+  end
 end
 
 def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
+  sports = sports.flatten
+  sports = sports.uniq
+  number = 1
+
+  sports.each do |sport|
+  p "No" + number.to_s + sport
+  number = number + 1
+ end
 
 end
 
