@@ -162,17 +162,17 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
+  end
+
    def info
     p "名前：#{@name}"
     p "年齢：#{@age}"
     p "性別：#{@gender}"
    end
-
-   def initialize(**params)
-    @name = params[:name]
-    @age = params[:age]
-    @gender = params[:gender]
-  end
 end
 
 def q17
@@ -187,17 +187,17 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
+
   def introduce
     if @age < 20
       "はいさいまいど〜，ゆたぼんです！！！"
     else
       "こんにちは，あじーと申します。宜しくお願いいたします。"
     end
-  end
-
-  def initialize(**params)
-    @name = params[:name]
-    @age = params[:age]
   end
 end
 
@@ -212,13 +212,11 @@ end
 
 class Item
   # 以下を修正して下さい
-  def name
-   @name
+  def initialize(name:)
+    @name = name
   end
 
-  def initialize(**params)
-    @name = params[:name]
-  end
+attr_reader :name
 end
 
 def q19
@@ -237,35 +235,33 @@ end
 
 class UserQ20
   # 以下に回答を記載
-  attr_reader :name, :age # ゲッター
-
   def initialize(**params)# セッター
     @name = params[:name]
     @age = params[:age]
   end
 
+  attr_reader :name, :age # ゲッター
 end
 
 class Zoo
   # 以下に回答を記載
-  attr_reader :name, :entry_fee# ゲッター
-
- def info_entry_fee(user)
-  if user.age <= 6
-   p "#{user.name}さんの入場料金は #{@entry_fee[:infant]} 円です。"
-  elsif user.age <= 12 
-   p "#{user.name}さんの入場料金は #{@entry_fee[:children]} 円です。"
-  elsif user.age <= 64
-   p "#{user.name}さんの入場料金は #{@entry_fee[:adult]} 円です。"
-  elsif user.age >= 64
-   p "#{user.name}さんの入場料金は #{@entry_fee[:senior]} 円です。"
-  end
- end
-
    def initialize(**params)
     @name = params[:name]
     @entry_fee = params[:entry_fee]
    end
+
+ def info_entry_fee(user)
+  case user.age
+  when 0...6
+   p "#{user.name}さんの入場料金は #{@entry_fee[:infant]} 円です。"
+  when 6...12 
+   p "#{user.name}さんの入場料金は #{@entry_fee[:children]} 円です。"
+  when 13...64
+   p "#{user.name}さんの入場料金は #{@entry_fee[:adult]} 円です。"
+  else
+   p "#{user.name}さんの入場料金は #{@entry_fee[:senior]} 円です。"
+  end
+ end
 end
 
 
