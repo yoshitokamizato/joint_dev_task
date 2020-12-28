@@ -102,10 +102,9 @@ def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
-  sports.flatten!
-  sports.uniq!
+  sports.flatten!.uniq!
 
-  sports.each.each.with_index(1) do |sport,i|
+  sports.each.with_index(1) do |sport,i|
   p "No#{i} #{sport}"
   end
 
@@ -140,18 +139,10 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if data1.key?(:age)
-    p "OK"
-  else
-    p "NG"
-  end
-
-  if data2.key?(:age)
-    p "OK"
-  else
-    p "NG"
-  end
-
+  value = data1.key?(:age) ? "OK" : "NG"
+  puts value
+  value =  data2.key?(:age) ? "OK" : "NG"
+  puts value
 end
 
 def q16
@@ -171,7 +162,17 @@ end
 
 class UserQ17
   # 以下に回答を記載
+   def info
+    p "名前：#{@name}"
+    p "年齢：#{@age}"
+    p "性別：#{@gender}"
+   end
 
+   def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
+  end
 end
 
 def q17
@@ -186,7 +187,18 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def introduce
+    if @age < 20
+      "はいさいまいど〜，ゆたぼんです！！！"
+    else
+      "こんにちは，あじーと申します。宜しくお願いいたします。"
+    end
+  end
 
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
 end
 
 def q18
@@ -200,9 +212,12 @@ end
 
 class Item
   # 以下を修正して下さい
+  def name
+   @name
+  end
 
-  def initialize(name)
-    @name = name
+  def initialize(**params)
+    @name = params[:name]
   end
 end
 
@@ -212,14 +227,48 @@ def q19
   puts book.name
 end
 
+
+
+
+
+
+
+
+
 class UserQ20
   # 以下に回答を記載
+  attr_reader :name, :age # ゲッター
+
+  def initialize(**params)# セッター
+    @name = params[:name]
+    @age = params[:age]
+  end
 
 end
 
 class Zoo
   # 以下に回答を記載
+  attr_reader :name, :entry_fee # ゲッター
 
+ def info_entry_fee
+  if user.age <= 6
+   "#{@name}さんの入場料金は #{@infant} 円です。"
+  elsif user.age <= 12 
+   "#{@name}さんの入場料金は #{@children} 円です。"
+  elsif user.age <= 64
+   "#{@name}さんの入場料金は #{@adult} 円です。"
+  elsif user.age >= 64
+   "#{@name}さんの入場料金は #{@senior} 円です。"
+  end
+ end
+
+   def initialize(**params)
+    @name = params[:name]
+    @infant = params[:entry_fee][:infant]
+    @children = params[:entry_fee][:children]
+    @adult = params[:entry_fee][:adult]
+    @senior = params[:entry_fee][:senior]
+   end
 end
 
 
@@ -234,7 +283,7 @@ def q20
     UserQ20.new(name: "ぎん", age: 108)
   ]
 
-  users.each do |user|
-    zoo.info_entry_fee(user)
-  end
+ users.each do |user|
+  zoo.info_entry_fee(user)
+ end
 end
