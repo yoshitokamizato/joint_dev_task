@@ -129,7 +129,7 @@ end
 
 def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
-  
+
   # 以下に回答を記載
   p data.keys
 end
@@ -212,11 +212,11 @@ end
 
 class Item
   # 以下を修正して下さい
+  attr_reader :name
+
   def initialize(name:)
     @name = name
   end
-
-attr_reader :name
 end
 
 def q19
@@ -235,12 +235,12 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_reader :name, :age # ゲッター
+
   def initialize(**params)# セッター
     @name = params[:name]
     @age = params[:age]
   end
-
-  attr_reader :name, :age # ゲッター
 end
 
 class Zoo
@@ -250,18 +250,22 @@ class Zoo
     @entry_fee = params[:entry_fee]
    end
 
- def info_entry_fee(user)
-  case user.age
-  when 0...6
-   p "#{user.name}さんの入場料金は #{@entry_fee[:infant]} 円です。"
-  when 6...12 
-   p "#{user.name}さんの入場料金は #{@entry_fee[:children]} 円です。"
-  when 13...64
-   p "#{user.name}さんの入場料金は #{@entry_fee[:adult]} 円です。"
-  else
-   p "#{user.name}さんの入場料金は #{@entry_fee[:senior]} 円です。"
-  end
- end
+   def info_entry_fee(user)
+
+    price = case user.age
+    when 0...6
+     @entry_fee[:infant]
+    when 6...12
+     @entry_fee[:children]
+    when 13...64
+     @entry_fee[:adult]
+    else
+     @entry_fee[:senior]
+    end
+
+     puts "#{user.name}さんの入場料金は#{price}円です。"
+   end
+
 end
 
 
