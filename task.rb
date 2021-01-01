@@ -66,11 +66,14 @@ def q6
 
   # 以下に回答を記載
 
-  numbers2 = []
+  # numbers2 = []
+  # numbers1.each do |number|
+  #   numbers2 << number * 10
+  # end
 
-  numbers1.each do |number|
-    numbers2 << number * 10
-  end
+numbers2 = numbers1.map {|number|
+  number*10
+} 
 
   p numbers2
 
@@ -80,7 +83,7 @@ def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  array.map!(&:to_i) 
 
   # 以下は変更しないで下さい
   p array
@@ -90,6 +93,13 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
+  upper_case_programming_languages = programming_languages.map {|language|
+    language.upcase
+  }
+
+  programming_languages.map! {|language|
+    language.capitalize!
+  }  
 
   # 以下は変更しないで下さい
   p programming_languages
