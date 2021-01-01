@@ -93,14 +93,16 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  upper_case_programming_languages = programming_languages.map {|language|
-    language.upcase
-  }
+  # upper_case_programming_languages = programming_languages.map {|language|
+  #   language.upcase
+  # }
+  # programming_languages.map! {|language|
+  #   language.capitalize!
+  # }  
 
-  programming_languages.map! {|language|
-    language.capitalize!
-  }  
-
+  upper_case_programming_languages = programming_languages.map(&:upcase)
+  programming_languages.map!(&:capitalize!)
+  
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
@@ -110,6 +112,9 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
+  names.each.with_index do |name, i|
+    p "会員No.#{i+1} #{name}さん"
+  end 
 
 end
 
@@ -118,12 +123,25 @@ def q10
 
   # 以下に回答を記載
 
+  foods.map {|food|
+    if food.include?("うに")
+      puts "好物です"
+    else
+      puts "まぁまぁ好きです"
+    end
+}
+
 end
 
 def q11
   sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
 
   # 以下に回答を記載
+
+  sports.flatten!.uniq!
+  sports.each.with_index do |sport, i|
+    p "No.#{i+1} #{sport}"
+  end
 
 end
 
