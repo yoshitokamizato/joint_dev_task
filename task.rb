@@ -112,8 +112,8 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.each.with_index do |name, i|
-    p "会員No.#{i+1} #{name}さん"
+  names.each.with_index(1) do |name, i|
+    p "会員No.#{i} #{name}さん"
   end 
 
 end
@@ -123,13 +123,21 @@ def q10
 
   # 以下に回答を記載
 
-  foods.map {|food|
+  # foods.map {|food|
+  #   if food.include?("うに")
+  #     puts "好物です"
+  #   else
+  #     puts "まぁまぁ好きです"
+  #   end
+  #}
+
+  foods.each do |food|
     if food.include?("うに")
       puts "好物です"
     else
-      puts "まぁまぁ好きです"
+      puts "まあまあ好きです"
     end
-}
+  end
 
 end
 
@@ -139,8 +147,8 @@ def q11
   # 以下に回答を記載
 
   sports.flatten!.uniq!
-  sports.each.with_index do |sport, i|
-    p "No.#{i+1} #{sport}"
+  sports.each.with_index(1) do |sport, i|
+    p "No.#{i} #{sport}"
   end
 
 end
