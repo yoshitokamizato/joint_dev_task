@@ -174,10 +174,12 @@ def q13
   # user_data[:age] = update_data[:age]
   # user_data[:address] = update_data[:address]
 
-  user_data.store(:age ,32)
-  user_data.store(:address ,"沖縄")
+  # user_data.store(:age ,32)
+  # user_data.store(:address ,"沖縄")
 
-  p user_data
+  # p user_data.merge!(update_data)
+  p user_data.update(update_data)
+
 end
 
 def q14
