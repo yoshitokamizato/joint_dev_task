@@ -100,8 +100,7 @@ def q11
 
   # 以下に回答を記載
   puts "ユーザーの趣味一覧"
-  sports.flatten!
-  sports.uniq!
+  sports.flatten!.uniq!
   sports.each.with_index(1) do |sport, i|
     puts "No#{i} #{sport}"
   end
