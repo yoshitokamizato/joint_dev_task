@@ -77,8 +77,8 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-  names.each.with_index(1) do |names, i|
-    puts "会員No.#{i} #{names}さん"
+  names.each.with_index(1) do |name, i|
+    puts "会員No.#{i} #{name}さん"
   end
 end
 
@@ -100,7 +100,8 @@ def q11
 
   # 以下に回答を記載
   puts "ユーザーの趣味一覧"
-  sports = sports.flatten.uniq
+  sports.flatten!
+  sports.uniq!
   sports.each.with_index(1) do |sport, i|
     puts "No#{i} #{sport}"
   end
