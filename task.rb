@@ -125,9 +125,7 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-  data.each_value do |info|
-    puts info
-  end
+  puts data.keys
 end
 
 def q15
@@ -135,8 +133,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  puts "OK" if data1.key?(:name)
-  puts "NO" if data2.key?(:name)
+  puts data1.include?(:age)? ('OK'):('NO')
+  puts data2.include?(:age)? ('OK'):('NO')
 end
 
 def q16
