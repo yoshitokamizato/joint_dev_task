@@ -3,11 +3,11 @@
 ## 教材のご案内
 
 - LaravelQuest
-  - 参考リンク：https://yu-nocode.com/entry/laravel-quest-1/
+  - 参考リンク：https://yu-nocode.com/laravel-quest-1/
 
 ## Laravel 課題8
 
-LaravelQuest1：https://yu-nocode.com/entry/laravel-quest-1/
+LaravelQuest1：https://yu-nocode.com/laravel-quest-1/
 
 1. 今回作るアプリ内容をご確認下さい
 
@@ -23,7 +23,7 @@ LaravelQuest1：https://yu-nocode.com/entry/laravel-quest-1/
 
 ## Laravel 課題9
 
-LaravelQuest2：https://yu-nocode.com/entry/laravel-quest-2/
+LaravelQuest2：https://yu-nocode.com/laravel-quest-2/
 
 1. Laravelプロジェクトの環境変数（DB名など）を設定し、MySQLとLaravelが正常に接続できるようにデータベースを作成して下さい
 
@@ -39,7 +39,7 @@ LaravelQuest2：https://yu-nocode.com/entry/laravel-quest-2/
 
 ## Laravel 課題10
 
-LaravelQuest3：https://yu-nocode.com/entry/laravel-quest-3/
+LaravelQuest3：https://yu-nocode.com/laravel-quest-3/
 
 1. トップページをつくり、ブラウザに表示させて下さい
 
@@ -51,7 +51,7 @@ LaravelQuest3：https://yu-nocode.com/entry/laravel-quest-3/
 
 ## Laravel 課題11
 
-LaravelQuest4：https://yu-nocode.com/entry/laravel-quest-4/
+LaravelQuest4：https://yu-nocode.com/laravel-quest-4/
 
 1. ログイン機能を実装し、ログイン・ログアウトを実行して下さい
 
@@ -63,7 +63,7 @@ LaravelQuest4：https://yu-nocode.com/entry/laravel-quest-4/
 
 ## Laravel 課題12
 
-LaravelQuest5：https://yu-nocode.com/entry/laravel-quest-5/
+LaravelQuest5：https://yu-nocode.com/laravel-quest-5/
 
 1. usersテーブルにchannelカラムを追加し、「チャンネル名の表示」「表示名の変更」機能を実装して下さい
 
@@ -75,11 +75,11 @@ LaravelQuest5：https://yu-nocode.com/entry/laravel-quest-5/
 
 ## Laravel 課題13
 
-LaravelQuest6：https://yu-nocode.com/entry/laravel-quest-6/
+LaravelQuest6：https://yu-nocode.com/laravel-quest-6/
 
 1. Laravelエラー、デバッグの方法について学習して下さい
 
-- 【テキスト教材】Laravelエラーについて (https://yu-nocode.com/entry/laravel-quest-2/)
+- 【テキスト教材】Laravelエラーについて (https://yu-nocode.com/laravel-quest-2/)
 
 2. 本講座のLaravelプロジェクトをGitのローカルリポジトリにステージ→コミットして下さい
 
@@ -91,7 +91,7 @@ LaravelQuest6：https://yu-nocode.com/entry/laravel-quest-6/
 
 ## Laravel 課題14
 
-LaravelQuest7：https://yu-nocode.com/entry/laravel-quest-7/
+LaravelQuest7：https://yu-nocode.com/laravel-quest-7/
 
 1. YouTube動画のタイトルを、YouTube APIから自動で取得できるように実装して下さい
 
