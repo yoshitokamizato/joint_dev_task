@@ -106,6 +106,12 @@ def q8
   # 以下は変更しないで下さい
   p programming_languages
   p upper_case_programming_languages
+
+# メモ：
+# ・「%w」文字列からなる配列を作成したいときに「[ ]」(ブラケット)や「" "」を省略して記述するためのRubyの構文
+# ・「programming_languages.map(&:upcase)」programming_languagesの要素をすべて大文字にする
+# ・「programming_languages.map(&:capitalize)」programming_languagesの要素の頭文字のみ大文字にする
+
 end
 
 def q9
@@ -139,6 +145,9 @@ def q10
     end
   end
 
+
+  # メモ：
+  # ・「.map」は、中身の処理が複数行になる場合は使わない。代わりにeachをつかう。
 end
 
 def q11
@@ -149,6 +158,9 @@ def q11
   sports.flatten!.uniq!
   sports.each.with_index(1) do |sport, i|
     p "No.#{i} #{sport}"
+
+  #   メモ：
+  # ・「sports.flatten!.uniq!」sports配列からネストを消し、重複している要素を取り除く
   end
 
 end
@@ -237,6 +249,38 @@ end
 class UserQ17
   # 以下に回答を記載
 
+  #paramsなし
+  # def initialize(name:,age:,gender:)
+  #   @name = name 
+  #   @age = age
+  #   @gender = gender
+  # end
+  # def info
+  #   puts <<~TEXT
+  #   "名前：#{@name}"
+  #   "年齢：#{@age}"
+  #   "性別：#{@gender}"
+  #   TEXT
+  # end
+
+  # paramsあり
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+    @gender = params[:gender]
+  end
+
+  def info
+    puts <<~TEXT
+
+    "名前：#{@name}"
+    "年齢：#{@age}"
+    "性別：#{@gender}"
+    TEXT
+  end
+
+
+
 end
 
 def q17
@@ -251,6 +295,18 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(**params)
+    @name = params[:name]
+    @age = params[:age]
+  end
+
+  def introduce
+    if @age == 32
+      return "こんにちは，#{@name}と申します。宜しくお願いいたします。"
+    elsif @age == 10
+      return "はいさいまいど〜，#{@name}です！！！"
+    end
+  end
 
 end
 
@@ -266,8 +322,12 @@ end
 class Item
   # 以下を修正して下さい
 
-  def initialize(name)
+  def initialize(name:)
     @name = name
+  end
+
+  def name
+      @name
   end
 end
 
@@ -279,12 +339,33 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  attr_reader :name, :age
+  def initialize(name:, age:)
+      @name = name
+      @age = age
+  end
 
 end
 
 class Zoo
   # 以下に回答を記載
-
+  def initialize(name:, entry_fee:)
+    # @zoo_name = name
+    @entry_fee = entry_fee
+  end
+  
+  def info_entry_fee(user)
+    case user.age
+    when 0..5
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:infant]} 円です。"
+    when 6..12
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:children]} 円です。"
+    when 13..64
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:adult]} 円です。"
+    when 65..120
+      puts "#{user.name}さんの入場料金は #{@entry_fee[:senior]} 円です。"
+    end
+  end
 end
 
 
