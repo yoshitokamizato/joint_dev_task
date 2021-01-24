@@ -59,12 +59,12 @@ print("#####q5#####".PHP_EOL);
 //キーワード：配列　空　判定
 
 $array1 = [];
-var_export(!empty($array1));
+var_export(empty($array1));
 
 echo PHP_EOL;
 
 $array2 = [1, 5, 8, 10];
-var_export(!empty($array2));
+var_export(empty($array2));
 
 echo PHP_EOL;
 
