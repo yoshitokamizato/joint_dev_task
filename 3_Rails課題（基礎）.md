@@ -2,10 +2,10 @@
 
 ## 教材のご案内
 
-- [逆転教材のテキスト教材](https://arcane-gorge-21903.herokuapp.com/)
+- [逆転教材のテキスト教材](https://www.yanbaru-code.com/)
   - Ruby on Rails の環境構築
   - Ruby on Rails の基本 〜 resources を使ったCRUD処理の実装
-- [逆転教材の動画](https://arcane-gorge-21903.herokuapp.com/movies)
+- [逆転教材の動画](https://www.yanbaru-code.com/movies)
   - エンジニアになるために大切な5つの考え方【前半】 〜 動的ページと静的ページ
 
 ## 課題の提出方法
@@ -40,7 +40,7 @@ $ rails new アプリ名 -d postgresql
 ### Rails 課題1
 
 「Hello World」を表示するアプリを作成し，提出して下さい。
-- [【テキスト教材】Ruby on Rails で Hello World!!](https://arcane-gorge-21903.herokuapp.com/texts/209)
+- [【テキスト教材】Ruby on Rails で Hello World!!](https://www.yanbaru-code.com/texts/209)
 
 ### Rails 課題2
 
@@ -48,8 +48,8 @@ $ rails new アプリ名 -d postgresql
 
 1. `resources` を使わない「CRUDアプリ」を作成してコミットして下さい。
 
-- [【テキスト教材】CRUD処理の実装](https://arcane-gorge-21903.herokuapp.com/texts/211)
+- [【テキスト教材】CRUD処理の実装](https://www.yanbaru-code.com/texts/211)
 
 2. `feature/resources` ブランチを作成して切り替え， `resources` を使った「CRUDアプリ」に修正してプルリク を出し，提出して下さい。（マージはしないで下さい！）
 
-- [【テキスト教材】resources を使ったCRUD処理の実装](https://arcane-gorge-21903.herokuapp.com/texts/214)
+- [【テキスト教材】resources を使ったCRUD処理の実装](https://www.yanbaru-code.com/texts/214)
