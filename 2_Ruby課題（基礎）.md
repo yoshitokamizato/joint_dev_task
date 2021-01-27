@@ -5,9 +5,9 @@ Rubyの基礎力を高めることがプログラマーとしての生産性を�
 
 ## 教材のご案内
 
-- [逆転教材の動画](https://arcane-gorge-21903.herokuapp.com/movies)
+- [逆転教材の動画](https://www.yanbaru-code.com/movies)
   - Rubyで使用する主なクラスについて 〜 ハッシュについて
-- [逆転教材のテキスト教材](https://arcane-gorge-21903.herokuapp.com/)
+- [逆転教材のテキスト教材](https://www.yanbaru-code.com/)
   - プログラミングを学習するための基礎知識
   - 入出力を行うためのメソッド一覧 〜 ハッシュ
 
