@@ -3,7 +3,7 @@
 ## 教材のご案内
 
 - 逆転教材のPHP講座
-  - 参考リンク：https://arcane-gorge-21903.herokuapp.com/movies?genre=PHP
+  - 参考リンク：https://www.yanbaru-code.com/movies?genre=PHP
 
 ## 課題の提出方法
 
