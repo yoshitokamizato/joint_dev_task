@@ -6,7 +6,7 @@ PHPの基礎力を高めることがプログラマーとしての生産性を�
 ## 教材のご案内
 
 - 逆転教材のPHP講座
-  - 参考リンク：https://arcane-gorge-21903.herokuapp.com/texts?genre=PHP
+  - 参考リンク：https://www.yanbaru-code.com/texts?genre=PHP
 
 ## 回答方法について
 
