@@ -235,10 +235,10 @@ print("#####q16#####".PHP_EOL);
 //Q16. 次の配列の各要素について，「私の名前は〜です。年齢は〜歳です。」と表示して下さい。
 
 $users = [
-  [ "name" => "satou", "age" => 22 ],
-  [ "name" => "yamada", "age" => 12 ],
-  [ "name" => "takahashi", "age" => 32 ],
-  [ "name" => "nakamura", "age" => 41 ]
+    [ "name" => "satou", "age" => 22 ],
+    [ "name" => "yamada", "age" => 12 ],
+    [ "name" => "takahashi", "age" => 32 ],
+    [ "name" => "nakamura", "age" => 41 ]
 ];
 
 foreach($users as $key => $user){
