@@ -258,7 +258,7 @@ class User
     protected $age;
     protected $gender;
 
-    function __construct($user_name,$user_age,$user_gender)    {
+    function __construct($user_name,$user_age,$user_gender) {
         $this->name = $user_name;
         $this->age = $user_age;
         $this->gender = $user_gender;
@@ -291,7 +291,7 @@ class Man
     protected $name;
     protected $age;
 
-    function __construct($user_name,$user_age)    {
+    function __construct($user_name,$user_age) {
         $this->name = $user_name;
         $this->age = $user_age;
     }
@@ -346,7 +346,7 @@ class Human
     public $name;
     public $age;
 
-    function __construct($user_name,$user_age)    {
+    function __construct($user_name,$user_age) {
         $this->name = $user_name;
         $this->age = $user_age;
     }
@@ -359,7 +359,7 @@ class Zoo
     protected $name;
     protected $entry_fee;
 
-    function __construct($zoo_name,$zoo_entry_fee)    {
+    function __construct($zoo_name,$zoo_entry_fee) {
         $this->name = $zoo_name;
         $this->entry_fee = $zoo_entry_fee;
     }

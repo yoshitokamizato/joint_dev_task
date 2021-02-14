@@ -51,7 +51,7 @@ $array = ["1", "2", "3", "4", "5"];
   # 以下に回答を記載
 
   # 以下は変更しないで下さい
-  var_dump($array);
+var_dump($array);
 
 echo PHP_EOL;
 
