@@ -50,6 +50,9 @@ $array = ["1", "2", "3", "4", "5"];
 
   # 以下に回答を記載
 
+  # 以下は変更しないで下さい
+var_dump($array);
+
 echo PHP_EOL;
 
 print("#####q8#####".PHP_EOL);
@@ -183,9 +186,9 @@ class Human
 
 class Zoo
 {
-    
+
   # コードを追加
-    
+
 }
 
 $zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
