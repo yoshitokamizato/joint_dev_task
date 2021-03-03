@@ -91,16 +91,14 @@ def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-  result = foods.select{|food|food.include?("うに")}
-
-  if result
-    puts "まあまあ好きです"
-  else
-    puts "好物です"
+  foods.each do |food|
+    if food.include?("うに")
+      puts "#{food}:好物です"
+    else
+      puts "#{food}:まあまあ好きです"
+    end
   end
-
 end
-
 def q11
 
   # 以下に回答を記載
