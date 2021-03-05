@@ -49,14 +49,15 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  number2 = numbers1.map { |n| n * 10 }
+  p number2
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  puts array.join(',')
   # 以下は変更しないで下さい
   p array
 end
