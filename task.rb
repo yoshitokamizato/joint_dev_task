@@ -113,8 +113,7 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-  user_data2 = user_data.merge(update_data)
-  p user_data2
+  p user_data.merge!(update_data)
 end
 
 def q14
@@ -129,10 +128,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  
-
-
-  
+  p data1.key?(:age) ? "OK" : "NG"
+  p data2.key?(:age) ? "OK" : "NG"
 end
 
 def q16
