@@ -148,20 +148,21 @@ end
 
 class UserQ17 
   # 以下に回答を記載
-  class data
-    def info
-    @name = name
-    @age = age
-    @gender = gender
-
-    puts <<~TEXT
-    名前:#{@name}\n
-    年齢:#{@age}\n
-    性別:#{@gender}
-    TEXT
-    end
+  #initialaizeメソッド（初期値を設定する定義）
+  def initialize(name:, age:, gender:)
+      @name = name
+      @age = age
+      @gender = gender
   end
-end  
+  #infoメソッドで処理を実行
+  def info
+      puts <<~TEXT
+      名前:#{@name}\n
+      年齢:#{@age}\n
+      性別:#{@gender}
+      TEXT
+  end
+end
 
 def q17
   # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
@@ -173,6 +174,7 @@ def q17
   user2.info
 
 end
+
 
 class UserQ18
   # 以下に回答を記載
