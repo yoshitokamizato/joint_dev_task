@@ -157,8 +157,8 @@ class UserQ17
   #infoメソッドで処理を実行
   def info
       puts <<~TEXT
-      名前:#{@name}\n
-      年齢:#{@age}\n
+      名前:#{@name}
+      年齢:#{@age}
       性別:#{@gender}
       TEXT
   end
