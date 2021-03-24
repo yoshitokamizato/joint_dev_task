@@ -46,10 +46,23 @@ $ rails new アプリ名 -d postgresql
 
 両方が完了した時点で提出して下さい。
 
-1. `resources` を使わない「CRUDアプリ」を作成してコミットして下さい。
+1. `resources` を使わない「CRUDアプリ」を作成して「コミット」して下さい。
 
 - [【テキスト教材】CRUD処理の実装](https://www.yanbaru-code.com/texts/211)
 
 2. `feature/resources` ブランチを作成して切り替え， `resources` を使った「CRUDアプリ」に修正してプルリク を出し，提出して下さい。（マージはしないで下さい！）
 
 - [【テキスト教材】resources を使ったCRUD処理の実装](https://www.yanbaru-code.com/texts/214)
+
+```
+# resouces を使わないアプリ作成後に add, commit しているかどうかを確認
+
+git switch -c feature/resources
+
+# git branch で feature/resources に切り替わっていることを確認
+# resources を使用した形式に変更
+
+git add .
+git commit -m "resouces を使用した形式に変更"
+git push origin HEAD
+```
