@@ -178,7 +178,21 @@ end
 
 class UserQ18
   # 以下に回答を記載
+  def initialize(name:, age:)
+      @name = name
+      @age = age
+  end
+  #introduceメソッドで処理を実行
+  def introduce
 
+      if @age == 32
+      puts "こんにちは、#{@name}と申します。宜しくお願いいたします。"
+
+      else @age == 10
+      puts "はいさいまいど〜，#{@name}です！！！"
+      
+      end
+  end
 end
 
 def q18
@@ -193,12 +207,15 @@ end
 class Item
   # 以下を修正して下さい
 
-  def initialize(name)
+  def initialize(name:, age:)
+    #initializeで変数を定義
     @name = name
+    @age = age
   end
 end
 
 def q19
+
   # ここは変更しないで下さい
   book = Item.new(name: "ゼロ秒思考")
   puts book.name
