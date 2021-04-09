@@ -44,14 +44,19 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-
+  numbers2 = numbers1.map do |number1|
+    number1 * 10
+  end
+  p numbers2
 end
 
 def q7
   array = ["1", "2", "3", "4", "5"]
 
   # 以下に回答を記載
-
+  array.map! { |n|
+    n.to_i
+  }
   # 以下は変更しないで下さい
   p array
 end
@@ -60,6 +65,13 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
+  programming_languages.map! { |n|
+    n.capitalize
+  }
+
+  upper_case_programming_languages = programming_languages.map { |n|
+    n.upcase
+  }
 
   # 以下は変更しないで下さい
   p programming_languages
@@ -70,14 +82,22 @@ def q9
   names = ["田中", "佐藤", "佐々木", "高橋"]
 
   # 以下に回答を記載
-
+  names.each.with_index(1) do |name, i|
+    puts "会員No.#{i} #{name}さん"
+  end
 end
 
 def q10
   foods = %w(いか たこ うに しゃけ うにぎり うに軍艦 うに丼)
 
   # 以下に回答を記載
-
+  foods.each do |food|
+    if food.include?("うに")
+      puts "#{food}は好物です"
+    else
+      puts "#{food}はまあまあ好きです"
+    end
+  end
 end
 
 def q11
@@ -122,7 +142,7 @@ def q16
     { name: "satou", age: 22 },
     { name: "yamada", age: 12 },
     { name: "takahashi", age: 32 },
-    { name: "nakamura", age: 41 }
+    { name: "nakamura", age: 41 },
   ]
 
   # 以下に回答を記載
@@ -182,7 +202,6 @@ class Zoo
 
 end
 
-
 def q20
   # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
   zoo = Zoo.new(name: "旭山動物園", entry_fee: { infant: 0, children: 400, adult: 800, senior: 500 })
@@ -191,7 +210,7 @@ def q20
     UserQ20.new(name: "たま", age: 3),
     UserQ20.new(name: "ゆたぼん", age: 10),
     UserQ20.new(name: "あじー", age: 32),
-    UserQ20.new(name: "ぎん", age: 108)
+    UserQ20.new(name: "ぎん", age: 108),
   ]
 
   users.each do |user|
