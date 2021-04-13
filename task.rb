@@ -232,7 +232,7 @@ class UserQ20
 end
 class Zoo
   # 以下に回答を記載
-  attr_reader :name, entry_fee:
+  attr_reader :name, :entry_fee
   initialize (name:, entry_fee:)
     @entry_fee = entry_fee
 end
