@@ -185,9 +185,9 @@ class UserQ18
   #introduceメソッドで処理を実行
   def introduce
       if @age >= 20
-        puts "こんにちは、#{@name}と申します。宜しくお願いいたします。"
-      else @age < 20
-        puts "はいさいまいど〜、#{@name}です！！！"
+        "こんにちは、#{@name}と申します。宜しくお願いいたします。"
+      elsif @age < 20
+        "はいさいまいど〜、#{@name}です！！！"
       end
   end
 end
@@ -225,14 +225,33 @@ end
 
 class UserQ20
   # 以下に回答を記載
-
+  attr_reader :name, :age
+  initialize (name:, age:)
+    @name = name
+    @age = age
 end
 class Zoo
   # 以下に回答を記載
-
+  initialize (name:, entry_fee:)
+    @entry_fee = entry_fee
 end
-
-
+#以下に条件分岐を作成（ifよりcaseの方が複数処理ができる）
+#「もし（0~5歳）なら(幼児)（処理１）、（6~12歳なら子供）（処理２）、（13~64歳）なら(成人)（処理３）、（65~120歳）なら(シニア)（処理４）と分ける。
+def users.each do |user|#条件式
+  fee = {age |fee|}#変数feeを定義したい
+  case  info_entry_fee(user)#変数userを使用（initializeで定義済）
+  when 0 .. 5 #処理1
+    [infant: 0]
+  when 6 .. 12 #処理2
+    [children: 400]
+  when 13 .. 64 #処理3
+    [adult: 800]
+  when  65 .. 120 #処理4
+    [senior: 500]
+  end
+  #戻り値を出力（@users.nameと@feeを戻り値にする)
+  "#{@users.name}さんの入場料金は#{@fee}円です。"
+end
 
 def q20
   # ここは変更しないで下さい（動物園・ユーザー情報は変更していただいてOKです）
