@@ -225,33 +225,34 @@ end
 
 class UserQ20
   # 以下に回答を記載
+  # UserQ20new演算子からの引数をゲッターで取得、セッターは不要なので省略
+  # initializeメソッドを正しく記載する
   attr_reader :name, :age
-  initialize (name:, age:)
+  def initialize (name:, age:)
     @name = name
     @age = age
+  end
 end
 class Zoo
   # 以下に回答を記載
-  attr_reader :name, :entry_fee
-  initialize (name:, entry_fee:)
+  # zoo.newの引数を取得する
+  # attr_readerは省略してinfo_entry_fee(user)メソッドを定義
+  # nameは定義しないと可動しない(@nameは不要)
+  def initialize (name:, entry_fee:)
     @entry_fee = entry_fee
-end
-#以下に条件分岐を作成（ifよりcaseの方が複数処理ができる）
-#「もし（0~5歳）なら(幼児)（処理１）、（6~12歳なら子供）（処理２）、（13~64歳）なら(成人)（処理３）、（65~120歳）なら(シニア)（処理４）と分ける。
-def users.each do |user|#条件式
-  fee = {}#変数feeを定義したい
-  case  zoo.info_entry_fee(user)#変数userを使用（initializeで定義済）
-  when 0 .. 5 #処理1
-    [infant: 0]
-  when 6 .. 12 #処理2
-    [children: 400]
-  when 13 .. 64 #処理3
-    [adult: 800]
-  when 65 .. 120 #処理4
-    [senior: 500]
   end
-  #戻り値を出力（@users.nameと@feeを戻り値にする)
-  "#{@users.name}さんの入場料金は#{@fee}円です。"
+# initializeメソッドを使用しているのでnewの文だけ繰り返し実行
+# 条件分岐にcase文を使用、範囲を指定後、処理（thenは一行で記述するために使用するが省略しても良い）
+# entry_feeを変数→戻り値に使用
+  def info_entry_fee(user)
+    entry_fee = case user.age
+    when 0..5 then @entry_fee[:infant]
+    when 6..12 then @entry_fee[:children]
+    when 13..64 then @entry_fee[:adult]
+    when 65..120 then @entry_fee[:senior]
+    end
+    puts "#{user.name}さんの入場料金は#{entry_fee}円です。"
+  end
 end
 
 def q20
