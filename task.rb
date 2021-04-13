@@ -184,13 +184,10 @@ class UserQ18
   end
   #introduceメソッドで処理を実行
   def introduce
-
-      if @age == 32
-      puts "こんにちは、#{@name}と申します。宜しくお願いいたします。"
-
-      else @age == 10
-      puts "はいさいまいど〜，#{@name}です！！！"
-      
+      if @age >= 20
+        puts "こんにちは、#{@name}と申します。宜しくお願いいたします。"
+      else @age < 20
+        puts "はいさいまいど〜、#{@name}です！！！"
       end
   end
 end
@@ -214,8 +211,13 @@ class Item
   end
 end
 
+class Item
+    attr_reader :name
+    def initialize (name:)
+      @name = name
+    end
+end
 def q19
-
   # ここは変更しないで下さい
   book = Item.new(name: "ゼロ秒思考")
   puts book.name
@@ -225,11 +227,11 @@ class UserQ20
   # 以下に回答を記載
 
 end
-
 class Zoo
   # 以下に回答を記載
 
 end
+
 
 
 def q20
