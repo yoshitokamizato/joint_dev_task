@@ -243,15 +243,15 @@ class Zoo
   end
 # initializeメソッドを使用しているのでnewの文だけ繰り返し実行
 # 条件分岐にcase文を使用、範囲を指定後、処理（thenは一行で記述するために使用するが省略しても良い）
-# entry_feeを変数→戻り値に使用
+# feeを変数→戻り値に使用
   def info_entry_fee(user)
-    entry_fee = case user.age
+    fee = case user.age
     when 0..5 then @entry_fee[:infant]
     when 6..12 then @entry_fee[:children]
     when 13..64 then @entry_fee[:adult]
     when 65..120 then @entry_fee[:senior]
     end
-    puts "#{user.name}さんの入場料金は#{entry_fee}円です。"
+    puts "#{user.name}さんの入場料金は#{fee}円です。"
   end
 end
 
