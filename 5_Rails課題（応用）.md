@@ -288,6 +288,7 @@ end
 ```
 
 ```
+bundle install
 git add .
 git commit -m "debug ツールを導入"
 ```
