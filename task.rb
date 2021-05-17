@@ -213,9 +213,11 @@ end
 class Item
   # 以下を修正して下さい
 
-  def initialize(name)
+  attr_reader :name
+  def initialize(name:)
     @name = name
   end
+  
 end
 
 def q19
@@ -226,12 +228,34 @@ end
 
 class UserQ20
   # 以下に回答を記載
-
+  attr_reader :name, :age
+  def initialize(name:, age:)
+    @name = name
+    @age = age
+  end
 end
 
 class Zoo
   # 以下に回答を記載
+  def initialize(name:, entry_fee:)
+    @infant_fee = entry_fee[:infant]
+    @children_fee = entry_fee[:children]
+    @adult_fee = entry_fee[:adult]
+    @senior_fee = entry_fee[:senior]
+  end
 
+  def info_entry_fee(user)
+    case user.age
+    when 0..5
+      puts "#{user.name}さんの入場料金は #{@infant_fee} 円です。"
+    when 6..12
+      puts "#{user.name}さんの入場料金は #{@children_fee} 円です。"
+    when 13..64
+      puts "#{user.name}さんの入場料金は #{@adult_fee} 円です。"
+    else 65..120
+      puts "#{user.name}さんの入場料金は #{@senior_fee} 円です。"
+    end
+  end
 end
 
 
