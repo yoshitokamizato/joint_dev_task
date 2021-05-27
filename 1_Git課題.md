@@ -1,13 +1,13 @@
-# チーム開発 Git 課題
+# やんばるエキスパート Git 課題
 Git操作は現場では必須のスキルとなります。ぜひ問題をこなして基礎力を磨いていって下さい。
 
 ## 教材のご案内
 
-- [逆転教材の動画](https://arcane-gorge-21903.herokuapp.com/movies)
-  - Gitの基本
-  - Gitを使ったクローン、プルリク、マージの流れについて解説
-  - ソースコードをリモートリポジトリにプッシュするときの流れ
-- [逆転教材のテキスト教材（Git）](https://arcane-gorge-21903.herokuapp.com/)
+- [逆転教材の動画](https://www.yanbaru-code.com/movies)
+- 逆転教材のテキスト教材（Git）
+  - [Git 基本の流れ](https://www.yanbaru-code.com/texts/317)
+  - [Vimの使い方](https://www.yanbaru-code.com/texts/192)
+  - [Gitコマンド一覧・具体的な対処例](https://www.yanbaru-code.com/texts/193)
 
 ## 提出方法について
 
