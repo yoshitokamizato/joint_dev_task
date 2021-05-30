@@ -205,6 +205,9 @@ class Item
   def initialize(name)
     @name = name
   end
+  def name
+    @name[:name]
+  end
 end
 
 def q19
