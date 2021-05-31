@@ -29,7 +29,7 @@ print("#####q3#####".PHP_EOL);
 //Q3. 次の配列の中に 3 がいくつあるかを出力するコードを書き，出力して下さい。
 //キーワード：foreach 配列 重複
 
-$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
+$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 1, 4, 5, 9];
 
 $count = 0;
 foreach($numbers as $number){
@@ -98,9 +98,9 @@ echo PHP_EOL;
 print("#####q8#####".PHP_EOL);
 //Q8. 期待する出力結果になるようにコードを書き加えて下さい。
 
-$programming_languages = ["php","ruby","python","javascript"];
-$programming_languages = array_map('ucfirst',$programming_languages);
-$upper_case_programming_languages = array_map('strtoupper',$programming_languages);
+$programming_languages = ["php", "ruby", "python", "javascript"];
+$programming_languages = array_map('ucfirst', $programming_languages);
+$upper_case_programming_languages = array_map('strtoupper', $programming_languages);
 
 print_r($programming_languages);
 echo PHP_EOL;
@@ -128,7 +128,7 @@ echo PHP_EOL;
 print("#####q10#####".PHP_EOL);
 //Q10. 次の配列の各要素について， うに という文字列が含まれていれば「好物です」と表示し，そうでなければ「まぁまぁ好きです」と出力するコードを書いて下さい。
 
-$foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼","高級なうに"];
+$foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼", "高級なうに"];
 
 foreach($foods as $food){
     if(preg_match('/うに/',$food)){
@@ -149,9 +149,9 @@ $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"],
 $sports2 = [];
 foreach($sports as $key => $sport){
     if(is_array($sport)){
-        $sports2 = array_merge($sports2,$sport);
+        $sports2 = array_merge($sports2, $sport);
     }else{
-        array_push($sports2,$sport);
+        array_push($sports2, $sport);
     }
 }
 $sports2 = array_unique($sports2);
@@ -160,7 +160,7 @@ $sports3 = [];
 foreach($sports2 as $key => $sport){
     $number = $key + 1;
     $sport3 = "No.".$number." ".$sport;
-    array_push($sports3,$sport3);
+    array_push($sports3, $sport3);
 }
 
 print_r("ユーザの趣味一覧".PHP_EOL);
@@ -174,7 +174,7 @@ echo PHP_EOL;
 print("#####q12#####".PHP_EOL);
 //Q12. 次のハッシュから name の値を出力して下さい。
 
-$data = [ "user" => [ "name" => "satou", "age" => 33 ] ];
+$data = ["user" => ["name" => "satou", "age" => 33]];
 
 print_r($data["user"]["name"]);
 
@@ -184,8 +184,8 @@ echo PHP_EOL;
 print("#####q13#####".PHP_EOL);
 //Q13. 次の user_data に，update_data の内容を反映させ，user_data の内容を書き換え，出力して下さい。
 
-$user_data = [ "name" => "神里", "age" => 31, "address" => "埼玉"];
-$update_data = [ "age" => 32, "address" => "沖縄" ];
+$user_data = ["name" => "神里", "age" => 31, "address" => "埼玉"];
+$update_data = ["age" => 32, "address" => "沖縄"];
 
 $user_data = $update_data + $user_data;
 
@@ -197,11 +197,11 @@ echo PHP_EOL;
 print("#####q14#####".PHP_EOL);
 //Q14. 次の連想配列から全てのキー（添字）を取り出して、キーが数字である通常の配列（添字配列）を作成し，出力して下さい。
 
-$data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
+$data = ["name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com"];
 
 $new_data = [];
 foreach($data as $one_data){
-    array_push($new_data,$one_data);
+    array_push($new_data, $one_data);
 }
 
 print_r($new_data);
@@ -212,7 +212,7 @@ echo PHP_EOL;
 print("#####q15#####".PHP_EOL);
 //Q15. age というキーが含まれている場合は OK ，含まれていない場合は NG という文字列が出力されるコードを書いて下さい。
 
-$data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin" ];
+$data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
 
 if( array_key_exists('age',$data1) ) {
     print('OK'.PHP_EOL);
@@ -220,9 +220,9 @@ if( array_key_exists('age',$data1) ) {
     print('NG'.PHP_EOL);
 }
 
-$data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
+$data2 = ["name" => "yamada", "hobby" => "baseball", "role" => "normal"];
 
-if(array_key_exists('age',$data2) ) {
+if(array_key_exists('age', $data2) ) {
     print('OK'.PHP_EOL);
 } else {
     print('NG'.PHP_EOL);
@@ -235,10 +235,10 @@ print("#####q16#####".PHP_EOL);
 //Q16. 次の配列の各要素について，「私の名前は〜です。年齢は〜歳です。」と表示して下さい。
 
 $users = [
-    [ "name" => "satou", "age" => 22 ],
-    [ "name" => "yamada", "age" => 12 ],
-    [ "name" => "takahashi", "age" => 32 ],
-    [ "name" => "nakamura", "age" => 41 ]
+    ["name" => "satou", "age" => 22],
+    ["name" => "yamada", "age" => 12],
+    ["name" => "takahashi", "age" => 32],
+    ["name" => "nakamura", "age" => 41]
 ];
 
 foreach($users as $key => $user){
@@ -258,7 +258,7 @@ class User
     protected $age;
     protected $gender;
 
-    function __construct($user_name,$user_age,$user_gender) {
+    function __construct($user_name, $user_age, $user_gender) {
         $this->name = $user_name;
         $this->age = $user_age;
         $this->gender = $user_gender;
@@ -272,8 +272,8 @@ class User
 
 }
 
-$user1 = new User("神里",32,"男");
-$user2 = new User("あじー",32,"男");
+$user1 = new User("神里", 32, "男");
+$user2 = new User("あじー", 32, "男");
 
 $user1->info();
 print("-------------".PHP_EOL);
@@ -291,7 +291,7 @@ class Man
     protected $name;
     protected $age;
 
-    function __construct($user_name,$user_age) {
+    function __construct($user_name, $user_age) {
         $this->name = $user_name;
         $this->age = $user_age;
     }
@@ -306,8 +306,8 @@ class Man
 
 }
 
-$man1 = new Man("あじー",32);
-$man2 = new Man("ゆたぼん",10);
+$man1 = new Man("あじー", 32);
+$man2 = new Man("ゆたぼん", 10);
 
 $man1->introduce();
 $man2->introduce();
@@ -346,7 +346,7 @@ class Human
     public $name;
     public $age;
 
-    function __construct($user_name,$user_age) {
+    function __construct($user_name, $user_age) {
         $this->name = $user_name;
         $this->age = $user_age;
     }
@@ -359,7 +359,7 @@ class Zoo
     protected $name;
     protected $entry_fee;
 
-    function __construct($zoo_name,$zoo_entry_fee) {
+    function __construct($zoo_name, $zoo_entry_fee) {
         $this->name = $zoo_name;
         $this->entry_fee = $zoo_entry_fee;
     }
@@ -378,14 +378,14 @@ class Zoo
 
 }
 
-$zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
+$zoo = new Zoo("旭山動物園",["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
-$human1 = new Human("たま",3);
-$human2 = new Human("ゆたぼん",10);
-$human3 = new Human("あじー",32);
-$human4 = new Human("ぎん",108);
+$human1 = new Human("たま", 3);
+$human2 = new Human("ゆたぼん", 10);
+$human3 = new Human("あじー", 32);
+$human4 = new Human("ぎん", 108);
 
-$humans = [ $human1, $human2, $human3, $human4 ];
+$humans = [$human1, $human2, $human3, $human4];
 
 foreach($humans as $human){
     $zoo->info_entry_fee($human);
@@ -395,7 +395,7 @@ echo PHP_EOL;
 
 
 print("#####q21#####".PHP_EOL);
-//Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて下さい。
+//Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて、1から30までの正の整数を期待する出力結果にして下さい。
 
 //回答例1
 

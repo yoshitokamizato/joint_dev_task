@@ -62,7 +62,7 @@ $array2 = ["bird", "bat", "tiger"];
 ヒント：検索キーワードは「foreach　配列 重複」
 
 ```
-$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
+$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 1, 4, 5, 9];
 ```
 
 ## Q4. 次の配列から `null` の要素を削除し，出力して下さい。（新しい配列を作成せずに実現して下さい）
@@ -136,7 +136,7 @@ Array
 ## Q8. 期待する出力結果になるようにコードを書き加えて下さい。
 
 ```
-$programming_languages = ["php","ruby","python","javascript"];
+$programming_languages = ["php", "ruby", "python", "javascript"];
 
 # コードを追加
 
@@ -187,7 +187,7 @@ Array
 ## Q10. 次の配列の各要素について， `うに` という文字列が含まれていれば「好物です」と表示し，そうでなければ「まぁまぁ好きです」と出力するコードを書いて下さい。
 
 ```
-$foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼"];
+$foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼", "高級なうに"];
 ```
 
 ## Q11. 次の配列を用いて，期待する出力結果になるようにコードを書いて下さい。
@@ -213,20 +213,20 @@ No8 ボルダリング
 ## Q12. 次の連想配列から `name` の値を出力して下さい。
 
 ```
-$data = [ "user" => [ "name" => "satou", "age" => 33 ] ];
+$data = ["user" => ["name" => "satou", "age" => 33]];
 ```
 
 ## Q13. 次の `$user_data` に，`$update_data` の内容を反映させ，`$user_data` の内容を書き換え，出力して下さい。
 
 ```
-$user_data = [ "name" => "神里", "age" => 31, "address" => "埼玉"];
-$update_data = [ "age" => 32, "address" => "沖縄" ];
+$user_data = ["name" => "神里", "age" => 31, "address" => "埼玉"];
+$update_data = ["age" => 32, "address" => "沖縄"];
 ```
 
 ## Q14. 次の連想配列から全てのキー（添字）を取り出して、キーが数字である通常の配列（添字配列）を作成し，出力して下さい。
 
 ```
-$data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
+$data = ["name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com"];
 ```
 
 ## Q15. `age` というキーが含まれている場合は `OK` ，含まれていない場合は `NG` という文字列が出力されるコードを書いて下さい。
@@ -234,11 +234,11 @@ $data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "so
 例
 
 ```
-$data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin" ];
+$data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
 # 実行結果
 OK
 
-$data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
+$data2 = ["name" => "yamada", "hobby" => "baseball", "role" => "normal"];
 # 実行結果
 NG
 ```
@@ -247,9 +247,9 @@ NG
 
 ```
 $users = [
-  [ "name" => "satou", "age" => 22 ],
-  [ "name" => "yamada", "age" => 12 ],
-  [ "name" => "takahashi", "age" => 32 ],
-  [ "name" => "nakamura", "age" => 41 ]
+  ["name" => "satou", "age" => 22],
+  ["name" => "yamada", "age" => 12],
+  ["name" => "takahashi", "age" => 32],
+  ["name" => "nakamura", "age" => 41]
 ];
 ```
