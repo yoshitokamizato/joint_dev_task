@@ -17,7 +17,7 @@ $array2 = ["bird", "bat", "tiger"];
 echo PHP_EOL;
 
 print("#####q3#####".PHP_EOL);
-$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9];
+$numbers = [1, 5, 8, 10, 2, 3, 2, 3, 1, 4, 5, 9];
 
   # 以下に回答を記載
 
@@ -56,7 +56,7 @@ var_dump($array);
 echo PHP_EOL;
 
 print("#####q8#####".PHP_EOL);
-$programming_languages = ["php","ruby","python","javascript"];
+$programming_languages = ["php", "ruby", "python", "javascript"];
 
   # 以下に回答を記載
 
@@ -75,7 +75,7 @@ $names = ["田中", "佐藤", "佐々木", "高橋"];
 echo PHP_EOL;
 
 print("#####q10#####".PHP_EOL);
-$foods = ["いか","たこ","うに","しゃけ","うにぎり","うに軍艦","うに丼","高級なうに"]];
+$foods = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼", "高級なうに"];
 
   # 以下に回答を記載
 
@@ -89,30 +89,30 @@ $sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"],
 echo PHP_EOL;
 
 print("#####q12#####".PHP_EOL);
-$data = [ "user" => [ "name" => "satou", "age" => 33 ] ];
+$data = ["user" => ["name" => "satou", "age" => 33]];
 
   # 以下に回答を記載
 
 echo PHP_EOL;
 
 print("#####q13#####".PHP_EOL);
-$user_data = [ "name" => "神里", "age" => 31, "address" => "埼玉"];
-$update_data = [ "age" => 32, "address" => "沖縄" ];
+$user_data = ["name" => "神里", "age" => 31, "address" => "埼玉"];
+$update_data = ["age" => 32, "address" => "沖縄"];
 
   # 以下に回答を記載
 
 echo PHP_EOL;
 
 print("#####q14#####".PHP_EOL);
-$data = [ "name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com" ];
+$data = ["name" => "satou", "age" => 33, "address" => "saitama", "hobby" => "soccer", "email" => "hoge@fuga.com"];
 
   # 以下に回答を記載
 
 echo PHP_EOL;
 
 print("#####q15#####".PHP_EOL);
-$data1 = [ "name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin" ];
-$data2 = [ "name" => "yamada", "hobby" => "baseball", "role" => "normal" ];
+$data1 = ["name" => "saitou", "hobby" => "soccer", "age" => 33, "role" => "admin"];
+$data2 = ["name" => "yamada", "hobby" => "baseball", "role" => "normal"];
 
   # 以下に回答を記載
 
@@ -120,10 +120,10 @@ echo PHP_EOL;
 
 print("#####q16#####".PHP_EOL);
 $users = [
-  [ "name" => "satou", "age" => 22 ],
-  [ "name" => "yamada", "age" => 12 ],
-  [ "name" => "takahashi", "age" => 32 ],
-  [ "name" => "nakamura", "age" => 41 ]
+  ["name" => "satou", "age" => 22],
+  ["name" => "yamada", "age" => 12],
+  ["name" => "takahashi", "age" => 32],
+  ["name" => "nakamura", "age" => 41]
 ];
 
   # 以下に回答を記載
@@ -138,8 +138,8 @@ class User
 
 }
 
-$user1 = new User("神里",32,"男");
-$user2 = new User("あじー",32,"男");
+$user1 = new User("神里", 32, "男");
+$user2 = new User("あじー", 32, "男");
 
 $user1->info();
 print("-------------".PHP_EOL);
@@ -151,8 +151,8 @@ print("#####q18#####".PHP_EOL);
 
   # コードを追加
 
-$man1 = new Man("あじー",32);
-$man2 = new Man("ゆたぼん",10);
+$man1 = new Man("あじー", 32);
+$man2 = new Man("ゆたぼん", 10);
 
 $man1->introduce();
 $man2->introduce();
@@ -191,14 +191,14 @@ class Zoo
 
 }
 
-$zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
+$zoo = new Zoo("旭山動物園",["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
-$human1 = new Human("たま",3);
-$human2 = new Human("ゆたぼん",10);
-$human3 = new Human("あじー",32);
-$human4 = new Human("ぎん",108);
+$human1 = new Human("たま", 3);
+$human2 = new Human("ゆたぼん", 10);
+$human3 = new Human("あじー", 32);
+$human4 = new Human("ぎん", 108);
 
-$humans = [ $human1, $human2, $human3, $human4 ];
+$humans = [$human1, $human2, $human3, $human4];
 
 foreach($humans as $human){
   $zoo->info_entry_fee($human);

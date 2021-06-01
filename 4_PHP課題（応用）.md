@@ -14,8 +14,8 @@ class User
 
 }
 
-$user1 = new User("神里",32,"男");
-$user2 = new User("あじー",32,"男");
+$user1 = new User("神里", 32, "男");
+$user2 = new User("あじー", 32, "男");
 
 $user1->info();
 print("-------------".PHP_EOL);
@@ -41,8 +41,8 @@ echo PHP_EOL;
 ```
   # コードを追加
 
-$man1 = new Man("あじー",32);
-$man2 = new Man("ゆたぼん",10);
+$man1 = new Man("あじー", 32);
+$man2 = new Man("ゆたぼん", 10);
 
 $man1->introduce();
 $man2->introduce();
@@ -95,19 +95,19 @@ class Human
 
 class Zoo
 {
-    
+
   # コードを追加
-    
+
 }
 
-$zoo = new Zoo("旭山動物園",[ "infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
+$zoo = new Zoo("旭山動物園",["infant" => 0, "children" => 400, "adult" => 800, "senior" => 500]);
 
-$human1 = new Human("たま",3);
-$human2 = new Human("ゆたぼん",10);
-$human3 = new Human("あじー",32);
-$human4 = new Human("ぎん",108);
+$human1 = new Human("たま", 3);
+$human2 = new Human("ゆたぼん", 10);
+$human3 = new Human("あじー", 32);
+$human4 = new Human("ぎん", 108);
 
-$humans = [ $human1, $human2, $human3, $human4 ];
+$humans = [$human1, $human2, $human3, $human4];
 
 foreach($humans as $human){
   $zoo->info_entry_fee($human);
@@ -125,11 +125,10 @@ echo PHP_EOL;
 ぎんさんの入場料金は 500 円です。
 ```
 
-## Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて下さい。
+## Q21. FizzBuzz問題の応用問題です。次の仕様、条件を満たすコードを書いて、1から30までの正の整数を期待する出力結果にして下さい。
 
 仕様
 
-- 1から30までの正の整数で
 - 3の倍数でFizzを出力
 - 5の倍数でBuzzを出力
 - 7の倍数でHogeを出力
