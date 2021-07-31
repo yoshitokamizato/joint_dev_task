@@ -38,9 +38,7 @@
 
 ## ■ Rails 課題4
 
-https://github.com/yanbaru-expert/pagination_app
-
-
+【目標サンプル】 https://yanbaru-pagination-app.herokuapp.com/
 
 ### 課題4 参考教材
 
