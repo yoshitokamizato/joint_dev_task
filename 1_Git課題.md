@@ -1,17 +1,23 @@
-# 共同開発 Git 課題
-Git操作は現場では必須のスキルとなります。ぜひ問題をこなして基礎力を磨いていって下さい。
+# やんばるエキスパート Git課題
+
+Git 操作は現場では必須のスキルとなります。ぜひ問題をこなして基礎力を磨いていって下さい。
 
 ## 教材のご案内
 
-- 逆転教材の動画（Lv. 8 〜 Lv. 10）
-- 逆転教材のテキスト教材
-- 共同開発限定 過去の勉強会動画（第１回 〜 第３回）
-- Qiita記事「Gitでやりたいこと、ここで見つかる」（https://qiita.com/shimotaroo/items/b73d896ace10894fd290）
+- [Git とは](https://www.yanbaru-code.com/texts/191)
+- [Git 基本の流れ](https://www.yanbaru-code.com/texts/317)
+- [Vim の使い方](https://www.yanbaru-code.com/texts/192)
+- [Git コマンド一覧・具体的な対処例](https://www.yanbaru-code.com/texts/193)
+- [Windowsユーザー向け環境構築](https://www.yanbaru-code.com/texts/481)
 
+
+## 参考記事
+
+- [Git でやりたいこと、ここで見つかる](https://yutaro-blog.net/2021/05/20/git/)
 
 ## 提出方法について
 
-- 課題の Lv 1 から Lv 3 を全て済まされた上でGitHubにプッシュし，Slackの「課題提出」チャンネルに連絡下さい。
+- 課題の Lv 1 から Lv 3 を全て済まされた上で GitHub にプッシュし，Slack の「課題提出」チャンネルに連絡下さい。
   - GitHub のリポジトリのリンクを添えて下さい
 
 ## Lv 1: コミット・チェックアウト
@@ -46,7 +52,7 @@ Git操作は現場では必須のスキルとなります。ぜひ問題をこ�
 
 - ローカルの `hello` ディレクトリを削除し，GitHub から `hello` リポジトリをクローンする
 - `add_introduce` というブランチを作成し，切り替える
-- `hello.html` に次を追加してコミット（名前は自由に変更していただいてOKです）
+- `hello.html` に次を追加してコミット（名前は自由に変更していただいて OK です）
 
 ```
 <p>はじめまして，神里と申します。</p>
