@@ -1,16 +1,20 @@
-# 共同開発 PHP 課題（応用）
+# やんばるエキスパート PHP 課題（応用）
+
+## 教材のご案内
+
+- やんばるエキスパート教材：https://www.yanbaru-code.com/texts?genre=php
 
 ## 回答方法について
 
-- PHP課題（基礎）を参照下さい
+- [PHP課題（基礎）](https://github.com/yuya-ishikawa-qa/joint_dev_task/blob/master/2_PHP%E8%AA%B2%E9%A1%8C%EF%BC%88%E5%9F%BA%E7%A4%8E%EF%BC%89.md)を参照下さい
 
-## Q17. 次の Userクラス 内にinfoメソッドを追加し，期待する出力結果になるようにして下さい。
+## Q17. 次の Userクラス 内にinfoメソッドを追加し、期待する出力結果になるようにして下さい。
 
 ```
 class User
 {
 
-  # コードを追加
+// コードを追加
 
 }
 
@@ -36,10 +40,10 @@ echo PHP_EOL;
 性別：男
 ```
 
-## Q18. 年齢を用いた場合分けを利用して，期待する出力結果になるようなManクラスを作成して下さい。
+## Q18. 年齢を用いた場合分けを利用して、期待する出力結果になるようなManクラスを作成して下さい。
 
 ```
-  # コードを追加
+// コードを追加
 
 $man1 = new Man("あじー", 32);
 $man2 = new Man("ゆたぼん", 10);
@@ -53,8 +57,8 @@ echo PHP_EOL;
 期待する出力結果
 
 ```
-こんにちは，あじーと申します。宜しくお願いいたします。
-はいさいまいど〜，ゆたぼんです！！！
+こんにちは、あじーと申します。宜しくお願いいたします。
+はいさいまいど〜、ゆたぼんです！！！
 ```
 
 ## Q19. 次のコードはエラーが出ます。期待する出力結果となるようにコードを修正して下さい。
@@ -62,11 +66,11 @@ echo PHP_EOL;
 ```
 class Item{
 
-  protected $name;
+    protected $name;
 
-  function __construct($book_name){
-    $this->name = $book_name;
-  }
+    function __construct($book_name){
+        $this->name = $book_name;
+    }
 }
 
 $book = new Item("ゼロ秒思考");
@@ -81,22 +85,22 @@ echo PHP_EOL;
 ゼロ秒思考
 ```
 
-## Q20. 次の仕様を満たした上で，期待する出力結果になるようにコードを追加して下さい。
+## Q20. 次の仕様を満たした上で、期待する出力結果になるようにコードを追加して下さい。
 
-- 年齢区分は，幼児(0〜5歳)，子供(6〜12歳)，成人(13〜64歳)，シニア(65〜120歳)の4パターンとします。（この範囲外の年齢については対処しなくてOKです）
+- 年齢区分は、幼児(0〜5歳)、子供(6〜12歳)、成人(13〜64歳)、シニア(65〜120歳)の4パターンとします。（この範囲外の年齢については対処しなくてOKです）
 
 ```
 class Human
 {
 
-  # コードを追加
+    // コードを追加
 
 }
 
 class Zoo
 {
 
-  # コードを追加
+    // コードを追加
 
 }
 
@@ -110,7 +114,7 @@ $human4 = new Human("ぎん", 108);
 $humans = [$human1, $human2, $human3, $human4];
 
 foreach($humans as $human){
-  $zoo->info_entry_fee($human);
+    $zoo->info_entry_fee($human);
 }
 
 echo PHP_EOL;
