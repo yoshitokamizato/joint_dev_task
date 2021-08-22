@@ -77,7 +77,7 @@ $sports = array_diff($sports,[null]); //$sportsの要素から null を削除す
 //文字型である "null" とは区別する
 
 
-print_r($sports."回");
+print_r($sports);
 
 echo PHP_EOL;
 
@@ -219,7 +219,7 @@ $sports2 = array_values($sports2); //添字配列$sports2のキーの値を0か�
 $sports3 = []; //変数を初期化
 foreach ($sports2 as $key => $sport) {
     $number = $key + 1; //添字配列は0から始まるため、No.は+1しておく
-    $sport3[] = "No.".$number." ".$sport;
+    $sports3[] = "No.".$number." ".$sport;
 }
 
 print_r("ユーザの趣味一覧".PHP_EOL);
