@@ -9,8 +9,6 @@ def q1
   puts names
 end
 
-q1
-
 def q2
   array1 = ["dog", "cat", "fish"]
   array2 = ["bird", "bat", "tiger"]
