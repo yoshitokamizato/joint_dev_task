@@ -49,7 +49,7 @@ def q6
   numbers1 = [1, 2, 3, 4, 5]
 
   # 以下に回答を記載
-  numbers2 = numbers1.map { |value| value * 10 }
+  numbers2 = numbers1.map { |num| num * 10 }
   puts numbers2
 end
 
