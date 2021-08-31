@@ -22,8 +22,9 @@ def q3
   numbers = [1, 5, 8, 10, 2, 3, 2, 3, 3, 1, 4, 5, 9]
 
   # 以下に回答を記載
-  count_three = numbers.find { |v| v == 3 }
-  puts count_three
+  # count_three = numbers.find { |v| v == 3 }
+  # puts count_three
+  puts numbers.count(3)
 end
 
 def q4
