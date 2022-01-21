@@ -70,10 +70,12 @@
 
 ### 課題4 手順
 
-- 以下のコマンドでアプリの準備を行う（`--minimal` はアプリを最小構成にするオプションです）
+- 以下のコマンドでアプリの準備を行う
+  - `--minimal` はアプリを最小構成にするオプションです
+  - Rails のバージョンは `6` 系のより新しいバージョンを指定していただいても結構です
 
 ```zsh:ターミナル
-rails new pagination_app -d postgresql --minimal -T
+rails _6.1.4.4_ new pagination_app -d postgresql --minimal -T
 cd pagination_app
 rails db:create
 git add .
@@ -230,9 +232,10 @@ end
 ### 課題5 手順
 
 - 以下のコマンドでアプリの準備を行う
+  - Rails のバージョンは `6` 系のより新しいバージョンを指定していただいても結構です
 
 ```zsh:ターミナル
-rails new recommended_food_app -d postgresql -CT --skip-active-storage
+rails _6.1.4.4_ new recommended_food_app -d postgresql -CT --skip-active-storage
 
 cd recommended_food_app
 rails db:create
