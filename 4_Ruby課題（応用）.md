@@ -2,7 +2,7 @@
 
 ## 教材のご案内
 
-- 逆転教材のテキスト教材
+- やんばるエキスパート教材のテキスト教材
   - オブジェクト指向
 - ドラクエ風ゲームプログラムを作ってみよう！
   - [https://www.techpit.jp/courses/ruby-dragon-quest/lectures/12476434](https://www.techpit.jp/courses/ruby-dragon-quest/lectures/12476434)
