@@ -232,10 +232,11 @@ end
 ### 課題5 手順
 
 - 以下のコマンドでアプリの準備を行う
-  - Rails のバージョンは `6` 系のより新しいバージョンを指定していただいても結構です
+  - Rails のバージョンは `6` 系の最新バージョンを指定するようにして下さい
+  - `gem search -aer rails` でバージョン一覧を確認できます
 
 ```zsh:ターミナル
-rails _6.1.4.4_ new recommended_food_app -d postgresql -CT --skip-active-storage
+rails _6.1.7_ new recommended_food_app -d postgresql -CT --skip-active-storage
 
 cd recommended_food_app
 rails db:create
