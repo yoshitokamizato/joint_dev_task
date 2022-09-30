@@ -38,8 +38,6 @@
 
 ## ■ Rails 課題4
 
-【目標サンプル】 https://yanbaru-pagination-app.herokuapp.com/
-
 ### 課題4 参考教材
 
 まずはこちらを一通り学習されてから課題に取り組まれることをお勧めします。
