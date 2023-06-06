@@ -100,9 +100,9 @@ def q10
   # 以下に回答を記載
   foods.each do |food|
     if food.include?("うに")
-      puts "好物です."
+      puts "#{food}は好物です."
     else
-      puts "まぁまぁ好きです。"
+      puts "#{food}はまぁまぁ好きです。"
     end
   end
 
